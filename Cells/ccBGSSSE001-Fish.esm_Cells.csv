@@ -1,0 +1,47 @@
+FormID;Block;Sub-Block;EditorID;Name;Ownership;Location;LightingTemplate;ImageSpace;AcousticSpace;Music;Navmeshes;References;Persistent;Deleted;Disabled;Spawns;SpawnsList;Lights;Sounds;Furnitures;Containers
+[000BA599];9;8;BrokenOarGrotto01;Broken Oar Grotto;;BrokenOarGrottoLocation;GreenCaveFar;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;34;1;0;0;0;;0;0;0;0
+[040142F7];9;7;DLC2Frossel01;Frossel;;DLC2FrosselLocation;IceCaveMedium;DefaultImageSpace;IntDungeonCaveIce01;MUSDungeonIce;0;2;0;0;0;0;;0;0;0;0
+[000165B1];9;6;WhiterunCarlottaValentiasHouse;Carlotta Valentia's House;WhiterunCarlottaValentiasHouseFaction;WhiterunCarlottaValentiasHouseLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;1;0;0;1;MilaValentia;0;0;0;0
+[0401BBFB];9;5;DLC2BristlebackCave01;Bristleback Cave;;DLC2BristlebackCaveLocation;DLC2CastleKarstaagIceCaveLTClose;;IntDungeonCaveIce01;MUSDungeonIce;0;1;0;0;0;0;;0;0;0;0
+[000EF325];9;4;FalkreathBarracks;Falkreath Barracks;GuardFactionFalkreath;FalkreathBarracksLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreForestPine;0;3;3;0;1;1;ccBGSSSE001_MiscFalkreath_Guard;0;0;2;0
+[00015251];9;0;LostKnifeHideout01;Lost Knife Cave;;LostKnifeHideoutLocation;AlikrBaseLightingTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;20;1;0;0;0;;0;0;0;0
+[000152AA];8;9;Ustengrav02;Ustengrav Depths;;UstengravLocation;UstengravLarge;DefaultImageSpaceDungeon;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;3;0;0;0;0;;0;0;0;0
+[00016A10];8;8;SolitudeBitsandPieces;Bits and Pieces;SolitudeBitsAndPiecesFaction;SolitudeBitsAndPiecesLocation;SolitudeInteriors;SolitudeInterior_Liz;IntRoomStoneNarrowAcousticSpace;MUSTownTest;0;1;0;0;0;0;;0;0;0;1
+[00016A06];8;7;SolitudeProudspireManor;Proudspire Manor;;SolitudeProudspireManorLocation;SolitudeInteriors;SolitudeInteriorLgIS;IntRoomStoneMediumAcousticSpace;MUSTownTest;0;61;34;0;3;0;;0;0;0;1
+[00015296];8;7;Darkshade01;Darkshade;;DarkshadeCopseLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;6;1;0;0;0;;0;0;0;0
+[000138CE];8;7;MorthalMoorsideInn;Moorside Inn;Jonna;MorthalMoorsideInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneMediumAcousticSpace;MUSTavern;0;1;0;0;0;0;;0;0;0;0
+[000EF324];8;4;FalkreathBarracksJail;Falkreath Jail;GuardFactionFalkreath;FalkreathBarracksJailLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreForestPine;0;6;6;0;1;0;;0;0;0;0
+[010030E6];8;1;ccPlaceholder18Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;0;70;3;4;0;0;;10;0;1;0
+[000B6BE6];8;1;EmbershardMine01;Embershard Mine;;EmbershardLocation;MineTemplateMedium;DefaultImageSpaceDungeon;IntDungeonMine01;MUSDungeonCave;0;13;1;0;0;0;;0;0;0;0
+[02000EB7];7;6;DLC1DimHollowCrypt02;Dimhollow Cavern;;DLC1DimhollowCryptLocation;DLC1DarkDungeonFar;BleakFallsBarrowImagespace01;IntDungeonCave;MUSDungeonIce;0;7;0;0;0;0;;0;0;0;0
+[03016A55];7;5;BYOHHouse3PaleBasement;Heljarchen Hall, Cellar;;BYOHHouse3LocationInterior;WhiteRunIntMedLightingTemplate;;;MUSTownTest;1;522;214;0;25;0;;5;0;2;30
+[00015281];7;5;JaphetsFolly01;Sea Cave;;JaphetsFollyLocation;IceCaveMedium;DefaultImageSpaceDungeon;IntDungeonCaveIce01;MUSDungeonIce;0;1;0;0;0;0;;0;0;0;0
+[00016BDB];7;4;RiftenFishery;Riften Fishery;RiftenFisheryFaction;RiftenFisheryLocation;RiftenInteriors;RiftenInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;MUSExploreForestPine;0;111;37;0;14;5;ccBGSSSE001_MudcrabViriyaPetLarge,ccBGSSSE001_MudcrabViriyaPetMedium,ccBGSSSE001_MudcrabViriyaPetSmall,ccBGSSSE001_SwimsInDeepWaters,ccBGSSSE001_Viriya;2;0;3;2
+[00016A0E];6;8;SolitudeWinkingSkeever;The Winking Skeever;SolitudeWinkingSkeeverFaction;SolitudeWinkingSkeeverLocation;SolitudeInteriors;SolitudeInterior_Liz;IntRoomStoneMediumAcousticSpace;MUSTavernB;0;17;7;0;6;0;;0;0;1;0
+[00015226];6;6;ReachwaterRock01;Reachwater Rock;;ReachwaterRockLocation;GreenCaveMedium;DefaultImageSpaceDungeonBrightSky;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;14;1;0;0;0;;0;0;0;1
+[0401A7A8];6;5;DLC2Benkongerike02;Benkongerike Great Hall;;DLC2BenkongerikeLocation;BleakFallsBarrowFar;DefaultImageSpace;IntDungeonCatacombsAcousticSpace;MUSDungeonIce;0;1;0;0;0;0;;0;0;0;0
+[03015154];6;5;BYOHHouse2HjaalmarchBasement;Windstad Manor, Cellar;;BYOHHouse2LocationInterior;WhiteRunIntMedLightingTemplate;;;MUSTownTest;1;511;203;0;25;0;;5;0;2;19
+[0001521C];6;5;ShimmermistCave01;Shimmermist Cave;;ShimmermistCaveLocation;FalmerTemplateClose;FalmerImageSpace01;IntDungeonCave;MUSDungeonCave;0;6;0;0;0;0;;0;0;0;0
+[0401C080];6;1;DLC2DamphallMine01;Damphall Mine;;DLC2DamphallMineLocation;BleakFallsBarrowMedium;CaveImageSpace;IntDungeonMine01;MUSDungeonCave;0;14;1;0;0;0;;0;0;0;0
+[00069858];6;1;AlftandZCell;Alftand Ruined Tower;;AlftandLocation;IceCaveMedium;IceImagespace;IntDungeonDwemerMedium;MUSDungeon;0;7;3;0;0;2;ccBGSSSE001_TreasCorpseFishermanNordM,ccBGSSSE001_TreasCorpseFishermanNordMSecond;0;0;0;0
+[00016DFF];5;9;MarkarthArnleifandSonsTradingCompany;Arnleif and Sons Trading Company;MarkarthArnleifandSonsFaction;MarkarthArnleifandSonsTradingCompanyLocation;MarkarthLightingClose;MarkarthImageSpace;IntRoomStoneMediumAcousticSpace;MUSTownTest;0;1;0;0;0;0;;0;0;0;1
+[0004401B];5;5;DruadachRedoubt01;Druadach Redoubt Cave;;DruadachRedoubtLocation;BleakFallsBarrowMedium;CaveImageSpace;IntDungeonCaveEpicAcousticSpace;MUSDungeonCave;0;4;0;0;0;0;;0;0;0;0
+[00016BD9];5;4;RiftenPawnedPrawn;Pawned Prawn;RiftenPawnedPrawnFaction;RiftenPawnedPrawnLocation;RiftenInteriors;RiftenInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;0;0;0;0;;0;0;0;1
+[03004849];5;0;BYOHHouse1FalkreathBasement;Lakeview Manor, Cellar;;BYOHHouse1LocationInterior;WhiteRunIntMedLightingTemplate;;;MUSTownTest;1;519;203;0;25;0;;5;0;2;19
+[00016DFE];4;9;MarkarthSilverBloodInn;Silver-Blood Inn;MarkarthSilverBloodInnFaction;MarkarthSilverBloodInnLocation;MarkarthLightingClose;MarkarthImageSpace;IntRoomStoneMediumAcousticSpace;MUSTavernB;0;1;1;0;0;1;ccBGSSSE001_MiscMarkarthFishingStudent;0;0;0;0
+[04017EC0];4;8;DLC2RRTheRetchingNetch;The Retching Netch;DLC2RRNetchFaction;DLC2RRRetchingNetchLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneMediumAcousticSpace;MUSTavernB;0;1;0;0;0;0;;0;0;0;0
+[0003E908];4;6;ChillwindDepths01;Chillwind Depths;;ChillwindDepthsLocation;WaterCaveTemplate;FalmerImageSpace01;IntDungeonCave;MUSDungeonCave;0;5;1;0;0;0;;0;0;0;0
+[00016782];4;3;WindhelmSadrisUsedWares;Sadri's Used Wares;WindhelmPawnshopOwnerFaction;WindhelmSadrisUsedWaresLocation;WindhelmInteriorTemplate03;DefaultImageSpaceDungeon;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;0;0;0;0;;0;0;0;0
+[0005554A];4;1;LostProspectMine01;Lost Prospect Mine;;LostProspectMineLocation;CidhnaMine_LightingTemplateClose;DefaultImageSpaceDungeon;IntDungeonMine01;MUSDungeonCave;0;5;0;0;0;0;;0;0;0;0
+[000133C9];3;9;RiverwoodRiverwoodTrader;Riverwood Trader;RiverwoodRiverwoodTraderFaction;RiverwoodLucansDryGoodsLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreForestPine;0;1;0;0;0;0;;0;0;0;1
+[0005EAC7];3;8;aaaMarkers;Marker Storage Unit;;;;;;;0;10;10;0;0;1;ccBGSSSE001_FishPlaqueNPC;0;0;0;0
+[02004346];2;2;DLC1DarkfallCave01;Darkfall Cave;;DLC1DarkfallCaveLocation;DLC1DarkDungeonMedium;CastleVampireIS;DLC1IntDarkDungeonCave;MUSDungeonCave;0;4;0;0;0;0;;0;0;0;0
+[02009BDE];2;0;DLC1HunterCave01;Dead Drop Falls;;DLC1DeadDropFallsLocation;GreenCaveCloseDark;CaveImageSpace;IntDungeonCaveEpicAcousticSpace;MUSDungeonFort;0;16;1;0;0;0;;0;0;0;0
+[000152AE];2;0;BroodCavern01;Brood Cavern;;BroodCavernLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;5;1;0;0;0;;0;0;0;0
+[00013A76];2;0;FalkreathGrayPineGoods;Gray Pine Goods;FalkreathGrayPineGoodsFaction;FalkreathGrayPineLuxuriesLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneMediumAcousticSpace;MUSExploreForestPine;0;1;0;0;0;0;;0;0;0;1
+[00013813];1;9;WinterholdRanmirshouse;Birna's Oddments;WinterholdRanmirsHouseFaction;WinterholdRanmirsHouseLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreMountain;0;1;0;0;0;0;;0;0;0;1
+[000165B3];1;7;WhiterunBelethorsGeneralGoods;Belethor's General Goods;WhiterunBelethorsGoodsFaction;WhiterunBelethorsGeneralGoodsLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;0;0;0;0;;0;0;0;1
+[00013A89];1;2;DawnstarBarracks;Dawnstar Barracks;GuardFactionDawnstar;DawnstarBarracksLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreSnow;0;0;0;0;0;0;;0;0;0;0
+[000152A2];0;9;ClearspringTarn01;Clearspring Cave;;ClearspringTarnLocation;IlinaltasDeep_LightingTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;5;0;0;0;0;;0;0;0;0
+[00067F2A];0;7;SnaplegCave01;Snapleg Cave;;SnaplegCaveLocation;DarklightTowerTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;4;0;0;0;0;;0;0;0;0
+[00016BD4];0;4;RiftenHaelgasBunkhouse;Haelga's Bunkhouse;RiftenHaelgasBunkhouseFaction;RiftenHaelgasBunkhouseLocation;RiftenInteriors;RiftenInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;4;1;0;0;0;;0;0;1;1

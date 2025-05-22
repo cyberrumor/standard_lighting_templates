@@ -1,0 +1,92 @@
+FormID;Block;Sub-Block;EditorID;Name;Ownership;Location;LightingTemplate;ImageSpace;AcousticSpace;Music;Navmeshes;References;Persistent;Deleted;Disabled;Spawns;SpawnsList;Lights;Sounds;Furnitures;Containers
+[000361F9];9;8;Bthardamz02;Bthardamz Lower District;;BthardamzLocation;DwarvenLightingTemplate;DwarvenImagespace01;IntDungeonDwemerMedium;MUSDungeon;0;2;0;1;0;0;;1;0;0;0
+[01002FD9];9;4;ccEEJSSE004_Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00016BDD];9;4;RiftenHoneyside;Honeyside;;RiftenHoneysideLocation;RiftenInteriors;RiftenInterior_ImageSpace;IntRoomStoneNarrowAcousticSpace;MUSExploreForestPine;0;1;1;0;0;0;;0;0;0;0
+[01002FCF];9;3;ccPlaceholder01Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00015201];9;2;TolvaldsCave01;Tolvald's Cave;;TolvaldsCaveLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;2;0;0;0;0;;2;0;0;0
+[010030E7];9;1;ccPlaceholder17Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[01002F9C];8;8;ccBGSSSE043_Interior01;Quick Test Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;1;0;0;0;;0;0;0;0
+[00013810];8;8;WinterholdCollegeArcanaeum;The Arcanaeum;UraggroShub;WinterholdCollegeArcanaeumLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneLargeAcousticSpace;_NONE;0;1;0;0;0;0;;0;0;0;0
+[00016A06];8;7;SolitudeProudspireManor;Proudspire Manor;;SolitudeProudspireManorLocation;SolitudeInteriors;SolitudeInteriorLgIS;IntRoomStoneMediumAcousticSpace;MUSTownTest;0;6;6;0;2;0;;0;0;0;0
+[000371DE];8;5;BleakFallsBarrow01;Bleak Falls Temple;;BleakFallsBarrowLocation;BleakFallsBarrowFar;BleakFallsBarrowImagespace01;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;1;0;0;0;0;;1;0;0;0
+[01002FD8];8;4;ccPlaceholder10Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[0005DE24];8;4;HelgenKeep01;Helgen Keep;;HelgenLocation;HelgenKeepSunlightTemplate;HelgenImageSpaceSunlight;IntDungeonFortAcousticSpace;MUSDungeonFort;0;4;0;2;0;0;;2;0;0;0
+[00015200];8;2;TrevasWatch01;Treva's Watch;;TrevasWatchLocation;BleakFallsBarrowClose;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;MUSDungeonFort;0;1;1;0;0;0;;0;0;0;0
+[010030E6];8;1;ccPlaceholder18Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[0009AA4A];8;1;NightcallerTemple01;Nightcaller Temple;;NightcallerTempleLocation;NightCallerTemplate;NightCallerTemplePurpleImageSpace;IntDungeonFortAcousticSpace;MUSDungeonFort;0;1;0;0;0;0;;0;0;0;0
+[000151F6];8;1;WolfskullCave01;Wolfskull Cave;;WolfskullCaveLocation;HelgenKeepSunlightTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;20;4;8;0;0;;0;0;0;0
+[01002F9B];7;8;ccBGSSSE016Interior01;Quick Test Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;1;0;0;0;;0;0;0;0
+[0001380F];7;8;WinterholdCollegeHallofCountenance;Hall of Countenance;;WinterholdCollegeDormitoryLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneLargeAcousticSpace;_NONE;0;2;1;0;1;0;;0;0;0;0
+[0005B91B];7;6;TwilightSepulcher01;Twilight Sepulcher;;TwilightSepulcherLocation;BleakFallsBarrowMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;14;1;1;1;0;;0;0;0;0
+[01002FD7];7;4;ccPlaceholder09Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[010030E5];7;1;ccPlaceholder19Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[000213A0];6;9;SolitudeCastleDour;Castle Dour;SolitudeCastleDourFaction;SolitudeCastleDourLocation;SolitudeInteriors;SolitudeInteriorLgIS;IntRoomStoneMediumAcousticSpace;MUSCastle;0;1;0;0;0;0;;1;0;0;0
+[000152A8];6;9;CragwallowSlope01;Cragwallow Slope;;CragwallowSlopeLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;2;0;0;0;2;ccBGSSSE003_LvlBoneWolfZombie;0;0;0;0
+[01002F9A];6;8;ccBGSSSE016Interior02;Quick Test Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00015230];6;7;PinepeakCavern01;Pinepeak Cavern;;PinepeakCavernLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;6;0;3;0;0;;3;0;0;0
+[00080C6A];6;6;WhiterunDragonsreachJarlsQuarters;Dragonsreach Jarl's Quarters;DragonsreachOccupants;WhiterunDragonsreachLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;MUSCastle;0;4;0;0;0;0;;1;0;0;0
+[00015226];6;6;ReachwaterRock01;Reachwater Rock;;ReachwaterRockLocation;GreenCaveMedium;DefaultImageSpaceDungeonBrightSky;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;4;0;0;0;0;;4;0;0;0
+[01002FD6];6;4;ccPlaceholder08Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[0003DD34];6;3;DriftshadeSanctuary02;Driftshade Cellar;;DriftshadeSanctuaryLocation;BleakFallsBarrowClose;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;MUSDungeonFort;0;4;0;0;0;0;;4;0;0;0
+[00016BD0];6;3;RiftenThievesGuildHeadquarters;The Ragged Flagon - Cistern;ThievesGuildFaction;RiftenThievesGuildHeadquartersLocation;;RiftenRatwayTGHQ_Imagespace;IntDungeonFortAcousticSpace;MUSDungeonFort;0;7;0;0;0;0;;0;0;0;0
+[010030E4];6;1;ccPlaceholder20Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[01002F99];5;8;ccMDRSSE001_Interior01;Quick Test Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[000414DD];5;8;JaphetsFolly02;Japhet's Folly Towers;;JaphetsFollyLocation;IceCaveMedium;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;MUSDungeonIce;0;1;0;1;0;0;;0;0;1;0
+[0001529D];5;8;DeadMensRespite01;Dead Men's Respite;;DeadMensRespiteLocation;IlinaltasDeep_LightingTemplate;RiftenInterior_ImageSpace;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;1;1;0;0;0;;0;0;0;0
+[00015239];5;8;Morvunskar01;Morvunskar;;MorvunskarLocation;DarklightTowerTemplate;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;MUSDungeonFort;0;1;0;0;0;0;;0;0;0;0
+[00056C1B];5;5;Alftand02;Alftand Animonculory;;AlftandLocation;IceCave_HobsFall_LightingTemplateFar;DwarvenImagespace01;IntDungeonDwemerLarge;MUSDungeon;0;9;0;0;0;0;;9;0;0;0
+[000165A3];5;5;WhiterunDragonsreach;Dragonsreach;DragonsreachOccupants;WhiterunDragonsreachLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;MUSCastle;0;2;0;0;0;0;;1;0;0;0
+[01002FD5];5;4;ccPlaceholder07Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[000AB531];5;4;Folgunthur02;Folgunthur Crypt;;FolgunthurLocation;BleakFallsBarrowFar;DefaultImageSpaceDungeon;IntDungeonCatacombsSemiExteriorAcousticSpace;MUSDungeon;0;3;1;1;0;1;dunFolgunthur_MikrulGauldurson;0;0;0;0
+[00083559];5;4;Labyrinthian01;Labyrinthian;;LabyrinthianLocation;BleakFallsBarrowFar;DefaultImageSpaceDungeon;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;5;2;2;0;0;;0;0;0;1
+[00016BCF];5;3;RiftenRaggedFlagon;The Ragged Flagon;RiftenRaggedFlagonFaction;RiftenRaggedFlagonLocation;RiftenRatwayClose;RiftenRatway_Imagespace;IntSewerRatway;MUSDungeonFort;0;0;0;0;0;0;;0;0;0;0
+[010030ED];5;2;ccPlaceholder11Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;1;0;0;0;0;;0;0;0;0
+[010030E3];5;1;ccPlaceholder22Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[000B1783];5;1;CTest;Quick Test Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;0;6;6;0;1;0;;0;0;0;0
+[01002F98];4;8;ccEEJSSE003_Interior01;Quick Test Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;6;1;0;0;0;;0;0;0;0
+[0006DAA0];4;8;ThalmorEmbassy04;Thalmor Embassy, Barracks;;ThalmorEmbassyLocation;SolitudeInteriorFarms;SolitudeInterior_Liz;IntRoomWoodMediumAcousticSpace;MUSDungeonFort;0;8;0;0;0;8;ThalmorEmbassyGuardDayShift01,ThalmorEmbassyGuardDayShift02,ThalmorEmbassyGuardDayShift03,ThalmorEmbassyGuardDayShift04,ThalmorEmbassyGuardNightShift01,ThalmorEmbassyGuardNightShift02,ThalmorEmbassyGuardNightShift03,ThalmorEmbassyGuardNightShift04;0;0;0;0
+[0001529C];4;8;DeepwoodRedoubt01;Deepwood Redoubt;;DeepwoodRedoubtLocation;IceCave_HobsFall_LightingTemplate;IceMineImagespace;IntDungeonCaveIce02Large;MUSDungeonIce;0;1;0;0;0;0;;1;0;0;0
+[00015224];4;6;RedoransRetreat01;Redoran's Retreat;;RedoransRetreatLocation;CidhnaMine_LightingTemplate;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;MUSDungeonFort;0;5;0;0;0;0;;4;0;0;0
+[0005F536];4;5;Harmugstahl01;Harmugstahl;;HarmugstahlLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;2;0;0;0;0;;2;0;0;0
+[01002FD4];4;4;ccPlaceholder06Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00015206];4;3;StillbornCave01;Stillborn Cave;;StillbornCaveLocation;IceCaveMedium;IceImagespace;IntDungeonCaveIce01;MUSDungeonIce;0;37;0;8;0;0;;29;0;0;0
+[010030EC];4;2;ccPlaceholder12Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;1;0;0;0;0;;0;0;0;0
+[0007DCFC];4;2;ThalmorEmbassy02;Thalmor Embassy, Elenwen's Solar;;ThalmorEmbassyLocation;ThalmorInterior;ThalmorInteriorIS;IntRoomStoneMediumAcousticSpace;MUSDungeonFort;0;0;0;0;0;0;;0;0;0;0
+[00016778];4;2;WindhelmHjerim;Hjerim;;WindhelmHjerimLocation;WindhelmInteriorTemplate;DefaultImageSpaceDungeon;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;5;4;0;0;0;;0;0;0;4
+[010030E2];4;1;ccPlaceholder21Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;1;0;0;0;;0;0;0;0
+[000336FB];3;8;Valthume02;Valthume Catacombs;;ValthumeLocation;DraugrPriestClose;DefaultImageSpaceDungeon;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;1;0;0;0;0;;1;0;0;0
+[0002FD85];3;7;ForsakenCave02;Forsaken Crypt;;ForsakenCaveLocation;BleakFallsBarrowMedium;DefaultImageSpaceDungeon;IntDungeonCatacombsAcousticSpace;MUSDungeonIce;0;3;1;1;1;0;;0;0;0;0
+[000165B5];3;7;WhiterunJorrvaskr;Jorrvaskr;CompanionsFaction;WhiterunJorrvaskrLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;MUSCastle;0;2;0;0;0;0;;0;0;0;0
+[000CAB91];3;5;WinterholdCollegeHallofAttainment;Hall of Attainment;;WinterholdCollegeDormitory2Location;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneLargeAcousticSpace;_NONE;0;1;1;0;0;1;Enthir;0;0;0;0
+[01002FD3];3;4;ccPlaceholder05Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00043FAB];3;4;HaltedStreamCamp01;Halted Stream Camp;;HaltedStreamCampLocation;CidhnaMine_LightingTemplate;DefaultImageSpaceDungeon;IntDungeonMine01;MUSDungeonFort;0;2;1;0;0;0;;0;0;1;0
+[010030EB];3;2;ccPlaceholder13Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;1;0;0;0;0;;0;0;0;0
+[000152C3];3;2;Alftand01;Alftand Glacial Ruins;;AlftandLocation;IceCave_HobsFall_LightingTemplate;IceImagespace;IntDungeonDwemerLarge;MUSDungeon;0;13;0;2;0;0;;11;0;0;0
+[000151FB];3;2;Volunruud01;Volunruud;;VolunruudLocation;BleakFallsBarrowMedium;DefaultImageSpaceDungeon;IntDungeonCatacombsAcousticSpace;MUSDungeon;0;1;0;0;0;0;;0;0;0;0
+[010030E1];3;1;ccPlaceholder23Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[000A5A71];3;1;GeirmundsHall01;Geirmund's Hall;;GeirmundsHallLocation;GreenCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;1;1;0;0;1;dunGeirmundSigdis;0;0;0;0
+[0007947A];2;6;WhiterunJorrvaskrBasement;Jorrvaskr Living Quarters;CompanionsFaction;WhiterunJorrvaskrBasementLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;MUSCastle;0;7;1;0;0;1;AelaTheHuntress;0;0;0;0
+[0003B698];2;5;RiftenRatway01;The Ratway;;RiftenRatwayLocation;RiftenRatwayClose;RiftenRatway_Imagespace;IntDungeonFortAcousticSpace;MUSDungeonFort;1;7;5;0;0;0;;0;0;0;0
+[01002FD2];2;4;ccPlaceholder04Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;1;0;0;0;;0;0;0;0
+[010030EA];2;2;ccPlaceholder14Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00016776];2;2;WindhelmArgonianAssemblage;Argonian Assemblage;WindhelmArgonianFaction;WindhelmArgonianAssemblageLocation;WindhelmInteriorTemplate02;DefaultImageSpaceDungeon;IntRoomStoneLargeAcousticSpace;MUSTownTest;0;1;0;0;0;0;;0;0;0;0
+[00013A8A];2;2;DarkwaterCrossingGoldenrockMine;Goldenrock Mine;;DarkwaterCrossingGoldenRockMineLocation;DefaultLightingTemplate;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;MUSDungeonCave;0;5;0;0;0;0;;0;0;0;2
+[010030E0];2;1;ccPlaceholder24Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[000BBCB2];2;0;WEMerchantChests;Warehouse Bookshelves;;;DefaultLightingTemplate;DefaultImageSpace;;;0;1;1;0;0;0;;0;0;0;1
+[00054B6F];1;9;Mzulft03;Mzulft Aedrome;;MzulftLocation;DefaultLightingTemplate;DwarvenFoggyImagespace;IntDungeonDwemerMedium;MUSDungeonFort;0;1;0;0;0;0;;0;0;0;0
+[000216BB];1;9;HaemarsShame02;Haemar's Shame;;HaemarsShameLocation;IceCaveMedium;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;1;0;0;0;0;;0;0;0;0
+[0001523F];1;9;Mzulft01;Mzulft;;MzulftLocation;DwarvenLightingMedium;DefaultImageSpaceDungeon;IntDungeonDwemerMedium;MUSDungeonFort;0;4;0;3;0;0;;1;0;0;0
+[00097299];1;6;WindhelmPalaceUpstairs01;Palace of the Kings Upstairs;WindhelmPalace;WindhelmPalaceOfTheKingsLocation;WindhelmInteriorTemplate02;DefaultImageSpaceDungeon;IntRoomStoneNarrowAcousticSpace;MUSCastle;0;6;6;0;0;0;;0;0;1;0
+[01002FD1];1;4;ccPlaceholder03Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[010030E9];1;2;ccPlaceholder15Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[010030DF];1;1;ccPlaceholder25Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00016DFA];0;9;MarkarthVlindrelHall;Vlindrel Hall;;MarkarthVlindrelHallLocation;MarkarthLightingClose;MarkarthImageSpace;IntRoomStoneMediumAcousticSpace;MUSTownTest;0;1;1;0;0;0;;0;0;0;0
+[000DDF7C];0;8;AnisesCabin01;Cellar;HagravenFaction;AnisesCabinLocation;CidhnaMine_LightingTemplateClose;DefaultImageSpaceDungeon;IntRoomStoneNarrowAcousticSpace;MUSExploreForestPine;0;5;2;0;0;0;;0;0;1;0
+[00097298];0;6;WindhelmPalaceUpstairs02;Palace of the Kings Upstairs;WindhelmPalace;WindhelmPalaceOfTheKingsLocation;WindhelmLightingTemplate;DefaultImageSpaceDungeon;IntRoomStoneNarrowAcousticSpace;MUSCastle;0;8;6;0;0;0;;0;0;0;0
+[000165A8];0;6;WhiterunBreezehome;Breezehome;;WhiterunBreezehomeLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;2;2;0;1;1;HousecarlWhiterun;0;0;0;0
+[01002FD0];0;4;ccPlaceholder02Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[00058B4C];0;4;NchuandZel06;Nchuand-Zel Control;;NchuandZelLocation;NchuandZelMedium;DefaultImageSpaceDungeon;IntDungeonDwemerMedium;MUSDungeonFort;0;2;0;0;0;0;;0;0;0;0
+[010030E8];0;2;ccPlaceholder16Interior01;Creation Club Cell;;;DefaultLightingTemplate;AAAPurkeyCave01;;;1;5;0;0;0;0;;0;0;0;0
+[0001525C];0;2;LargashburShagrolsLonghouse;Largashbur Longhouse;TownLargashburFaction;LargashburLonghouseLocation;GreenCaveClose;DefaultImageSpaceDungeon;IntRoomStoneMediumAcousticSpace;MUSExploreForestPine;0;3;1;0;0;1;Ugor;0;0;0;0
+[00027F1A];0;1;ThalmorEmbassy05;Reeking Cave;;ThalmorEmbassyLocation;DefaultLightingTemplate;BleakFallsBarrowImagespace01;IntDungeonCave;MUSDungeonFort;0;3;3;0;0;0;;0;0;0;0
+[00027D1C];0;0;KilkreathRuins03;Kilkreath Catacombs;;KilkreathRuinsLocation;IceCaveMedium;DefaultImageSpaceDungeon;IntDungeonCatacombsAcousticSpace;MUSDungeonFort;0;7;0;1;0;0;;6;0;0;0

@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+from dataclasses import dataclass
+from pathlib import Path
+
+LIGHTING_VALUE = 32
+
+@dataclass(kw_only=True)
+class Cell:
+    plugin: str # Skyrim.esm
+    name: str   # whiterundragonsreach
+    id: str     # 000165A3
+
+# Get the Cells.csv from "Export interior cell names" from xEdit for each plugin one by one,
+# rename the files <my_plugin_file_stem>.<my_plugin_file_extension>_Cells.csv and put them
+# in the Cells folder in this repo. Run this script from the base directory of this repo.
+cells = []
+for file in Path("Cells").iterdir():
+    contents = ""
+    with open(file, "r") as f:
+        contents = f.read()
+
+    lines = contents.split("\n")
+
+    for line in lines:
+        if not line:
+            continue
+        if ";" not in line:
+            continue
+
+        entries = line.split(";")
+
+        cell = Cell(
+            plugin=file.name.split("_")[0],
+            name=entries[3],
+            id=entries[0].replace("[", "").replace("]", ""),
+        )
+
+        cells.append(cell)
+
+result = []
+
+# Whatever plugin touches the cell first will be the plugin we use in the config,
+# in cases where multiple plugins modify the same cell.
+plugins = [
+    "Skyrim.esm",
+    "Update.esm",
+    "Dawnguard.esm",
+    "HearthFires.esm",
+    "Dragonborn.esm",
+    "ccBGSSSE001-Fish.esm",
+    #"ccQDRSSE001-SurvivalMode.esl", # no cells
+    "ccBGSSSE025-AdvDSGS.esm",
+]
+for plugin in plugins:
+    for index, cell in enumerate(cells):
+
+        if any(
+            i in cell.name.lower()
+            for i in
+            [
+                "marker",
+                "test",
+                "holding",
+                "delete",
+                # "blackreach",
+            ]
+        ):
+            continue
+
+        if not cell.id or not cell.name:
+            continue
+
+        if cell.plugin == plugin and cell.id not in (id for id in (x.id for x in result)):
+            result.append(cell)
+
+
+
+template = f"""\
+; EditorID
+filterByCells=PluginName|FormID:removeInheritanceFlags=ambientcolor,directionalcolor,fogcolor,fognear,fogfar,directionalrotation,directionalfade,clipdistance,fogpower,fogmax,lightfadedistances:fogNear=0:fogFar=0:fogPower=1:clipDist=0:ambientRed={LIGHTING_VALUE}:ambientGreen={LIGHTING_VALUE}:ambientBlue={LIGHTING_VALUE}:directionalRed={LIGHTING_VALUE}:directionalGreen={LIGHTING_VALUE}:directionalBlue={LIGHTING_VALUE}:fogColorNearRed={LIGHTING_VALUE}:fogColorNearGreen={LIGHTING_VALUE}:fogColorNearBlue={LIGHTING_VALUE}:directionalAmbientXMinRed={LIGHTING_VALUE}:directionalAmbientXMinGreen={LIGHTING_VALUE}:directionalAmbientXMinBlue={LIGHTING_VALUE}:directionalAmbientXMaxRed={LIGHTING_VALUE}:directionalAmbientXMaxGreen={LIGHTING_VALUE}:directionalAmbientXMaxBlue={LIGHTING_VALUE}:directionalAmbientYMinRed={LIGHTING_VALUE}:directionalAmbientYMinGreen={LIGHTING_VALUE}:directionalAmbientYMinBlue={LIGHTING_VALUE}:directionalAmbientYMaxRed={LIGHTING_VALUE}:directionalAmbientYMaxGreen={LIGHTING_VALUE}:directionalAmbientYMaxBlue={LIGHTING_VALUE}:directionalAmbientZMinRed={LIGHTING_VALUE}:directionalAmbientZMinGreen={LIGHTING_VALUE}:directionalAmbientZMinBlue={LIGHTING_VALUE}:directionalAmbientZMaxRed={LIGHTING_VALUE}:directionalAmbientZMaxGreen={LIGHTING_VALUE}:directionalAmbientZMaxBlue={LIGHTING_VALUE}:directionalAmbientSpecularRed={LIGHTING_VALUE}:directionalAmbientSpecularGreen={LIGHTING_VALUE}:directionalAmbientSpecularBlue={LIGHTING_VALUE}
+
+"""
+
+home = Path.home()
+parent_path = home / ".local/share/ammo/Skyrim Special Edition/mods/standard_lighting_templates/Data/SKSE/Plugins/SkyPatcher/cell/standard_lighting_templates/"
+
+for plugin in plugins:
+    with open(parent_path / f"{plugin}.ini", "w") as f:
+        standard_lighting_templates_contents = ""
+        for cell in sorted(result, key=lambda x: x.name):
+            if cell.plugin != plugin:
+                continue
+
+            config_string = template.replace("EditorID", cell.name).replace("PluginName", cell.plugin).replace("FormID", cell.id)
+
+            if "FormID" in config_string:
+                continue
+            if "PluginName" in config_string:
+                continue
+
+            standard_lighting_templates_contents += config_string
+
+        print(standard_lighting_templates_contents.strip(), file=f)

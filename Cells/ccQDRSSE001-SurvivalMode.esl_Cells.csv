@@ -1,0 +1,2 @@
+FormID;Block;Sub-Block;EditorID;Name;Ownership;Location;LightingTemplate;ImageSpace;AcousticSpace;Music;Navmeshes;References;Persistent;Deleted;Disabled;Spawns;SpawnsList;Lights;Sounds;Furnitures;Containers
+[05000861];5;4;AAASurvivalMarkerCell;SurvivalMarkers;;DLC1SoulCairnLocation;DefaultLightingTemplate;SolitudeInteriorIS;;;1;24;9;0;0;0;;0;0;0;0
