@@ -198,6 +198,16 @@ if __name__ == "__main__":
     processed_ids = []
 
     for plugin in OFFICIAL_PLUGINS:
+        # The "Export interior cells" script in xEdit exports cells touched by a plugin,
+        # even if that plugin didn't actually _create_ the cell. If a config file uses
+        # filterByCells=<plugin>|<cell>:
+        # where that cell was created by a different plugin than the one specified, then
+        # SkyPatcher will ctd after the main menu background shows but before the menu
+        # is possible to interact with.
+
+        # We can try to guess what cells each plugin owns by processing plugins in
+        # manually-defined order and excluding any cells which have an expended cell.id.
+        # This might not be 100% accurate, but it fixes the crash.
         contents = get_contents_for(plugin, (cell for cell in cells if cell.id not in processed_ids))
         processed_ids.extend([cell.id for cell in cells if cell.plugin == plugin])
         write_conf(plugin, contents)
