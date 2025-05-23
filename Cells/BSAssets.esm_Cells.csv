@@ -1,0 +1,9 @@
+FormID;Block;Sub-Block;EditorID;Name;Ownership;Location;LightingTemplate;ImageSpace;AcousticSpace;Music;Navmeshes;References;Persistent;Deleted;Disabled;Spawns;SpawnsList;Lights;Sounds;Furnitures;Containers
+[01601D9E];8;3;BSTestingWarehouse;Ore Test Cell;;;AlikrBaseLightingTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;169;0;0;0;0;;0;0;24;0
+[01601C5E];8;1;BSOreTestCell;Ore Test Cell;;;AlikrBaseLightingTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;40;6;0;0;0;;1;0;7;0
+[00000025];7;3;NavMeshGenCell;;;;;;;;0;0;0;0;0;0;;0;0;0;0
+[01602454];6;5;BSKWarehouseCrafting;Warehouse Crafting;;;DefaultLightingTemplate;DefaultImageSpace;;;0;826;1;0;0;0;;2;0;13;0
+[016025E3];5;5;BSKGoblins;;;;HelgenKeepClose;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;;0;9;0;0;0;0;;0;0;0;0
+[016028EC];2;3;BSKQADiseases;Diseases Test Cell;;;DefaultLightingTemplate;SolitudeInteriorIS;;;0;25;0;0;0;1;BSKQADiseaseNPC;7;0;0;0
+[01602C1F];1;5;BSKAyleidTest;;;;BleakFallsBarrowFar;DefaultImageSpaceDungeon;;;0;259;1;0;0;0;;5;0;4;0
+[0160249E];0;3;AyleidTestCell;Ayleid Test Cell;;;;;;;0;67;0;0;0;0;;0;0;0;0

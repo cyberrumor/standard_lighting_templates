@@ -1,0 +1,45 @@
+FormID;Block;Sub-Block;EditorID;Name;Ownership;Location;LightingTemplate;ImageSpace;AcousticSpace;Music;Navmeshes;References;Persistent;Deleted;Disabled;Spawns;SpawnsList;Lights;Sounds;Furnitures;Containers
+[0600137D];9;8;CYRBrumaIceWindTraders;Ice-Wind Traders;CYRBrumaIceWindTradersFaction;CYRBrumaIceWindTradersLocation;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;1;1;0;0;0;;0;0;0;1
+[060F981B];9;7;CYRKvatchCastleGreatHall;;;;CYRCastleIntTemplate;;;;0;1;0;0;0;0;;0;0;0;0
+[06075971];9;4;CYRWatersEdgeInterior06;The Niben Emerald;;CYRWatersEdgeInterior06Location;RiftenInteriors;;;;0;1;0;0;0;0;;0;0;0;0
+[0606ADFE];8;5;CYRFrostfireGlade02;Frostfire Cave, Cold's Embrace;;CYRFrostfireGladeLocation;IceCaveFar;IceImagespace;IntDungeonCaveIce02Large;CYRMUSDungeonCave;0;1;0;0;0;0;;0;0;0;0
+[06083A70];8;4;CYRBrinaCrossInterior05;;;CYRBrinaCrossInteriorLocation05;DraugrPriestMedium;;;;0;1;0;0;0;0;;0;0;0;0
+[06081DEC];8;4;CYRRedRubyCave02;Red Ruby Hollows;;CYRRedRubyCaveLocation;BleakFallsBarrowFar;CYRUnmarkedCaveImagespace;IntDungeonMine01;CYRMUSDungeonCave;0;1;0;0;0;0;;0;0;0;0
+[0606E378];8;4;CYRBrumaBasementAlbecius;Jucani Basement;CYRBrumaJucaniResidenceFaction;CYRBrumaJucaniResidenceLocation;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;CYRMUSTown;0;3;0;0;0;0;;0;0;0;0
+[06088605];7;9;CyrGarlasAgea;Garlas Agea;;CYRGarlasAgeaLocation;CYRAyleidIntTemplate;IceImagespace;CYRIntDungeonAyleidRuinAcousticSpace;CYRMUSDungeonAyleid;0;1;0;0;0;0;;0;0;0;0
+[0606A7BD];7;5;CYRSerpentsTrail01;Serpent's Trail;;CYRSerpentsTrailLocation;CYRSerpentsTemplate;ISSkyrimStormSnowNIGHT;IntDungeonCave;CYRMUSDungeonCave;0;3;0;0;0;0;;0;0;0;0
+[060020FF];7;4;CYRBrumaSynodConclave;Bruma Synod Conclave;CYRSynodFaction;CYRBrumaSynodConclaveLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;CYRMUSTown;0;1;0;0;0;0;;0;0;0;0
+[0606C40F];7;0;CYRBrumaCastleGreatHall;Castle Bruma Great Hall;CYRBrumaCastleFaction;CYRBrumaCastleLocation;CYRCastleIntTemplate;WhiteRunIntIS;IntRoomStoneLargeAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[06067653];7;0;CYRAleswellCrextusResidence;Crextus Residence;CYRAleswellCrextusResidenceFaction;CYRAleswellCrextusResidenceLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;1;0;0;0;0;;0;0;0;0
+[0606D25A];6;6;CYRGautierreManor;Gautierre Manor;CYRSimundGautierre;CYRUglyLoveHouseLocation;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;CYRMUSExploreMountain;0;7;0;0;0;0;;0;0;0;0
+[0606C40E];6;0;CYRBrumaCastleServiceHall;Castle Bruma Service Hall;CYRBrumaCastleFaction;CYRBrumaCastleLocation;CYRCastleIntTemplate;WhiteRunIntIS;IntRoomStoneNarrowAcousticSpace;CYRMUSTown;0;1;0;0;0;0;;0;0;0;0
+[060B47D5];5;8;CYRLakesideRetreat;Lakeside Retreat;;;FarmLightingTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;CYRMUSExploreGreatForest;0;1;0;0;0;0;;0;0;0;0
+[060F6743];5;7;CYRKvatchBookstoreOLD;Bookstore;;;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;;;0;122;0;0;0;0;;0;0;0;0
+[060D79E7];5;7;CYRKvatchCoastalCuriosities;Coastal Curiosities;;CYRKvatchCoastalCuriousitiesLocation;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;11;0;0;0;0;;0;0;0;0
+[060D79DD];5;6;CYRKvatchTheColovianChronicle;The Colovian Chronicle;CYRKvatchTheColovianChronicleFaction;CYRKvatchTheColovianChronicleLocation;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[0606EEAB];5;1;CYRFortPalePass;Fort Pale Pass;CYRImperialLegionFaction;CYRFortPalePassLocation;ImperialFortCloseTemplate;DefaultImageSpaceDungeon;IntDungeonFortAcousticSpace;CYRMUSExploreMountain;0;1;0;0;0;0;;0;0;0;0
+[060B496E];4;9;CYRLakesideRetreatDUPLICATE001;Lakeside Retreat;;CYRLakesideRetreatLocation;FarmLightingTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;CYRMUSExploreGreatForest;0;1;0;0;0;0;;0;0;0;0
+[060AECBC];4;6;CYRTelepe02;Telepe Angue;;CYRTelepeLocation;CYRAyleidLightingFar;;CYRIntDungeonAyleidRuinAcousticSpace;CYRMUSDungeonAyleid;0;1;0;0;0;0;;0;0;0;0
+[06083A76];4;5;CYRWeyeAlerioGurgesHouse;Alerio Gurges's House;;CYRWeyeInteriorLocation13;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneNarrowAcousticSpace;CYRMUSTown;0;3;0;0;0;0;;0;0;0;0
+[0604808E];4;5;CYRFortCutpurseTower;Fort Cutpurse;;CYRFortCutpurseLocation;Korvanjund;RiftenInterior_ImageSpace;IntDungeonFortAcousticSpace;CYRMUSDungeonFort;0;1;0;0;0;0;;0;0;0;0
+[060020FC];4;4;CYRBrumaWhitePineLodge;White Pine Lodge;;CYRBrumaPlayerHouse;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;CYRMUSTown;0;36;1;0;1;0;;0;0;4;2
+[060E27E2];4;1;CYRWeyeEmberfootFarm;Ember-Foot Farm;;CYRWeyeInteriorLocation02;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[0606C40C];4;0;CYRBrumaCastleLordsManor;Castle Bruma Lords Manor;CYRBrumaCastleFaction;CYRBrumaCastleLocation;CYRCastleIntTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;CYRMUSTown;0;3;0;0;0;0;;0;0;0;0
+[06084461];3;9;CYRUnderpall04;Underpall Keep, South Wing;;CYRUnderpallLocation;GreenCaveClose;FrostmereCryptImagespace;IntDungeonFortLargeAcousticSpace;CYRMUSDungeonCave;0;2;0;0;0;0;;0;0;0;0
+[06000D9B];3;8;CYRTestingAlchemy;Cyrodiil's Alchemy and Food Lab;;;;;;;0;3;0;0;0;0;;0;0;0;0
+[06072653];3;6;CYRBrumaCastleGuestWing;Castle Bruma Guest Wing;CYRBrumaCastleFaction;CYRBrumaCastleLocation;CYRCastleIntTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[06083A75];3;5;CYRAleswellInn;Aleflow Inn;CYRAleswellInnFaction;CYRAleswellInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;CYRMUSTavernEast;0;3;0;0;0;0;;0;0;1;0
+[0605F78D];3;5;CYRBrumaChapelHall;Chapel Hall;CYRBrumaCathedralofStMartinFaction;CYRBrumaCathedralofStMartinLocation;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;IntRoomStoneMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[0606C14F];3;0;CYRBrumaJerallViewInnBasement;Jerall View Inn Basement;CYRBrumaJerallViewInnFaction;CYRBrumaJerallViewInnLocation;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;CYRMUSTavernNormal;0;5;0;0;0;0;;0;0;0;0
+[060F981E];2;8;CYRKvatchCastleGuestWing;;;CYRKvatchCastleLocation;CYRCastleIntTemplate;;;;0;1;0;0;0;0;;0;0;0;0
+[060D79E4];2;7;CYRKvatchEnclaveoftheHour;Enclave of the Hour;CYRKvatchEnclaveoftheHourFaction;CYRKvatchEnclaveoftheHourLocation;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[06001114];2;7;CYRBrumaJerallViewInn;Jerall View Inn;CYRBrumaJerallViewInnFaction;CYRBrumaJerallViewInnLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;CYRMUSTavernNormal;0;6;0;0;0;0;;0;0;1;0
+[060D79DA];2;6;CYRKvatchinterior26;Yanara and Saelian's House;;CYRKvatchYanaraandSaeliansHouseLocation;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[06086756];2;4;CYRClutterTest;;;;SolitudeInteriors;DefaultImageSpace;IntRoomStoneMediumAcousticSpace;;0;3;0;0;0;0;;0;0;0;0
+[06003477];1;3;CYRPlunderedMine;Plundered Mine;;CYRPlunderedMineLocation;BleakFallsBarrowMedium;IceMineImagespace;IntDungeonMine01;CYRMUSDungeonCave;0;2;0;0;0;0;;0;0;0;0
+[060D79F6];0;9;CYRKvatchLegionRecruitmentOffice;Legion Recruitment Office;CYRImperialLegionFaction;CYRKvatchLegionRecruitmentOfficeLocation;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;6;0;0;0;0;;0;0;0;0
+[060F981C];0;8;CYRKvatchCastleCountsQuarters;;;CYRKvatchCastleLocation;CYRCastleIntTemplate;;;;0;1;0;0;0;0;;0;0;0;0
+[060D79EC];0;8;CYRKvatchFightersGuild;Kvatch Fighters Guild;;CYRKvatchFightersGuildLocation;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodLargeAcousticSpace;CYRMUSTown;0;4;0;0;0;0;;0;0;0;0
+[060D79E2];0;7;CYRKvatchCloudcrestBooks;Cloudcrest Books;;CYRKvatch13Location;CYRKvatchInteriorClose;CYRKvatchInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;CYRMUSTown;0;2;0;0;0;0;;0;0;0;0
+[0606E37A];0;5;CYRBrumaBasementSellus;Sellus' Basement;;CYRBrumaSellusBaseLocation;WhiteRunIntMedLightingTemplate;WhiteRunIntIS;;CYRMUSTown;0;1;0;0;0;0;;0;0;0;0
+[06002936];0;5;CYRSnowstoneRest;Snowstone Rest;CYRServicesSnowstoneRest;CYRSnowstoneRestInnLocation;WhiteRunIntMedLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;CYRMUSTavernNormal;0;4;0;0;0;0;;0;0;1;0
