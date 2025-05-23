@@ -1,8 +1,26 @@
 #!/usr/bin/env python3
+import textwrap
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Iterable
 
-LIGHTING_VALUE = 32
+# AMBIENT_FADE does nothing even if non-zero
+AMBIENT_FADE = 0
+DALC_FADE = 25
+SPECULAR_FADE = 25
+# FOG_FADE needs to be zero to disable fog.
+FOG_FADE = 25
+
+OFFICIAL_PLUGINS = [
+    "Skyrim.esm",
+    "Update.esm",
+    "Dawnguard.esm",
+    "HearthFires.esm",
+    "Dragonborn.esm",
+    "ccBGSSSE001-Fish.esm",
+    "ccBGSSSE025-AdvDSGS.esm"
+]
+
 
 @dataclass(kw_only=True)
 class Cell:
@@ -10,94 +28,177 @@ class Cell:
     name: str   # whiterundragonsreach
     id: str     # 000165A3
 
-# Get the Cells.csv from "Export interior cell names" from xEdit for each plugin one by one,
-# rename the files <my_plugin_file_stem>.<my_plugin_file_extension>_Cells.csv and put them
-# in the Cells folder in this repo. Run this script from the base directory of this repo.
-cells = []
-for file in Path("Cells").iterdir():
-    contents = ""
-    with open(file, "r") as f:
-        contents = f.read()
+def get_cells() -> Iterable[Cell]:
+    """
+    Get the Cells.csv from "Export interior cell names" from xEdit for each plugin one by one,
+    rename the files <my_plugin_file_stem>.<my_plugin_file_extension>_Cells.csv and put them
+    in the Cells folder in this repo. Run this script from the base directory of this repo.
 
-    lines = contents.split("\n")
+    standard_lighting_templates
+    ├── Cells
+    │   ├── ccBGSSSE001-Fish.esm_Cells.csv
+    │   ├── ccBGSSSE025-AdvDSGS.esm_Cells.csv
+    │   ├── ccQDRSSE001-SurvivalMode.esl_Cells.csv
+    │   ├── Dawnguard.esm_Cells.csv
+    │   ├── Dragonborn.esm_Cells.csv
+    │   ├── HearthFires.esm_Cells.csv
+    │   ├── Skyrim.esm_Cells.csv
+    │   └── Update.esm_Cells.csv
+    └── gen-slt
 
-    for line in lines:
-        if not line:
+    """
+    for file in Path("Cells").iterdir():
+        contents = ""
+        with open(file, "r") as f:
+            contents = f.read()
+
+        lines = contents.split("\n")
+
+        for line in lines:
+            if not line:
+                continue
+            if ";" not in line:
+                continue
+
+            entries = line.split(";")
+
+            cell = Cell(
+                plugin=file.name.split("_")[0],
+                name=entries[3],
+                id=entries[0].replace("[", "").replace("]", ""),
+            )
+
+            if cell.id == "FormID":
+                continue
+
+            if cell.name == "EditorID":
+                continue
+
+            if any(
+                i in cell.name.lower()
+                for i in
+                [
+                    "marker",
+                    "test",
+                    "holding",
+                    "delete",
+                    "navmeshgencell",
+                    "qasmoke",
+                    "utilitycell",
+                ]
+            ):
+                continue
+
+            yield cell
+
+def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
+    """
+    Given a plugin name like Skyrim.esm and an iterable over cells,
+    return a string representing the contents of the config file
+    for that particular plugin. This config excludes cells that are
+    handled by plugins other than the given one.
+    """
+    template = textwrap.dedent(
+        f"""\
+        ; EditorID
+        filterByCells=PluginName|FormID
+        :removeInheritanceFlags=
+        ambientcolor,
+        clipdistance,
+        directionalcolor,
+        directionalfade,
+        directionalrotation,
+        fogcolor,
+        fogfar,
+        fogmax,
+        fognear,
+        fogpower,
+        lightfadedistances
+        :clipDist=0
+        :fogFar=0
+        :fogNear=0
+        :fogPower=1
+        :ambientBlue={AMBIENT_FADE}
+        :ambientGreen={AMBIENT_FADE}
+        :ambientRed={AMBIENT_FADE}
+        :directionalAmbientSpecularBlue={SPECULAR_FADE}
+        :directionalAmbientSpecularGreen={SPECULAR_FADE}
+        :directionalAmbientSpecularRed={SPECULAR_FADE}
+        :directionalAmbientXMaxBlue={DALC_FADE}
+        :directionalAmbientXMaxGreen={DALC_FADE}
+        :directionalAmbientXMaxRed={DALC_FADE}
+        :directionalAmbientXMinBlue={DALC_FADE}
+        :directionalAmbientXMinGreen={DALC_FADE}
+        :directionalAmbientXMinRed={DALC_FADE}
+        :directionalAmbientYMaxBlue={DALC_FADE}
+        :directionalAmbientYMaxGreen={DALC_FADE}
+        :directionalAmbientYMaxRed={DALC_FADE}
+        :directionalAmbientYMinBlue={DALC_FADE}
+        :directionalAmbientYMinGreen={DALC_FADE}
+        :directionalAmbientYMinRed={DALC_FADE}
+        :directionalAmbientZMaxBlue={DALC_FADE}
+        :directionalAmbientZMaxGreen={DALC_FADE}
+        :directionalAmbientZMaxRed={DALC_FADE}
+        :directionalAmbientZMinBlue={DALC_FADE}
+        :directionalAmbientZMinGreen={DALC_FADE}
+        :directionalAmbientZMinRed={DALC_FADE}
+        :directionalBlue={DALC_FADE}
+        :directionalGreen={DALC_FADE}
+        :directionalRed={DALC_FADE}
+        :fogColorNearBlue={FOG_FADE}
+        :fogColorNearGreen={FOG_FADE}
+        :fogColorNearRed={FOG_FADE}
+
+        """
+    )
+    result = ""
+    for cell in cells:
+        if cell.plugin != plugin:
             continue
-        if ";" not in line:
-            continue
 
-        entries = line.split(";")
-
-        cell = Cell(
-            plugin=file.name.split("_")[0],
-            name=entries[3],
-            id=entries[0].replace("[", "").replace("]", ""),
+        config_string = template.replace(
+            "EditorID", cell.name
+        ).replace(
+            "PluginName", cell.plugin
+        ).replace(
+            "FormID", cell.id
         )
 
-        cells.append(cell)
+        formatted_config_string = config_string.replace(
+            "\n:", ":"
+        ).replace(
+            ",\n", ","
+        ).replace(
+            "=\n", "="
+        )
 
-result = []
+        result += formatted_config_string
 
-# Whatever plugin touches the cell first will be the plugin we use in the config,
-# in cases where multiple plugins modify the same cell.
-plugins = [
-    "Skyrim.esm",
-    "Update.esm",
-    "Dawnguard.esm",
-    "HearthFires.esm",
-    "Dragonborn.esm",
-    "ccBGSSSE001-Fish.esm",
-    #"ccQDRSSE001-SurvivalMode.esl", # no cells
-    "ccBGSSSE025-AdvDSGS.esm",
-]
-for plugin in plugins:
-    for index, cell in enumerate(cells):
-
-        if any(
-            i in cell.name.lower()
-            for i in
-            [
-                "marker",
-                "test",
-                "holding",
-                "delete",
-                # "blackreach",
-            ]
-        ):
-            continue
-
-        if not cell.id or not cell.name:
-            continue
-
-        if cell.plugin == plugin and cell.id not in (id for id in (x.id for x in result)):
-            result.append(cell)
+    return result.strip()
 
 
+def write_conf(plugin: str, contents: str) -> None:
+    """
+    Given a plugin name and the config contents for that plugin,
+    find and write that plugin's conf file in-place.
+    """
+    home = Path.home()
+    parent_path = home / ".local/share/ammo/Skyrim Special Edition/mods/standard_lighting_templates/Data/SKSE/Plugins/SkyPatcher/cell/standard_lighting_templates/"
 
-template = f"""\
-; EditorID
-filterByCells=PluginName|FormID:removeInheritanceFlags=ambientcolor,directionalcolor,fogcolor,fognear,fogfar,directionalrotation,directionalfade,clipdistance,fogpower,fogmax,lightfadedistances:fogNear=0:fogFar=0:fogPower=1:clipDist=0:ambientRed={LIGHTING_VALUE}:ambientGreen={LIGHTING_VALUE}:ambientBlue={LIGHTING_VALUE}:directionalRed={LIGHTING_VALUE}:directionalGreen={LIGHTING_VALUE}:directionalBlue={LIGHTING_VALUE}:fogColorNearRed={LIGHTING_VALUE}:fogColorNearGreen={LIGHTING_VALUE}:fogColorNearBlue={LIGHTING_VALUE}:directionalAmbientXMinRed={LIGHTING_VALUE}:directionalAmbientXMinGreen={LIGHTING_VALUE}:directionalAmbientXMinBlue={LIGHTING_VALUE}:directionalAmbientXMaxRed={LIGHTING_VALUE}:directionalAmbientXMaxGreen={LIGHTING_VALUE}:directionalAmbientXMaxBlue={LIGHTING_VALUE}:directionalAmbientYMinRed={LIGHTING_VALUE}:directionalAmbientYMinGreen={LIGHTING_VALUE}:directionalAmbientYMinBlue={LIGHTING_VALUE}:directionalAmbientYMaxRed={LIGHTING_VALUE}:directionalAmbientYMaxGreen={LIGHTING_VALUE}:directionalAmbientYMaxBlue={LIGHTING_VALUE}:directionalAmbientZMinRed={LIGHTING_VALUE}:directionalAmbientZMinGreen={LIGHTING_VALUE}:directionalAmbientZMinBlue={LIGHTING_VALUE}:directionalAmbientZMaxRed={LIGHTING_VALUE}:directionalAmbientZMaxGreen={LIGHTING_VALUE}:directionalAmbientZMaxBlue={LIGHTING_VALUE}:directionalAmbientSpecularRed={LIGHTING_VALUE}:directionalAmbientSpecularGreen={LIGHTING_VALUE}:directionalAmbientSpecularBlue={LIGHTING_VALUE}
-
-"""
-
-home = Path.home()
-parent_path = home / ".local/share/ammo/Skyrim Special Edition/mods/standard_lighting_templates/Data/SKSE/Plugins/SkyPatcher/cell/standard_lighting_templates/"
-
-for plugin in plugins:
     with open(parent_path / f"{plugin}.ini", "w") as f:
-        standard_lighting_templates_contents = ""
-        for cell in sorted(result, key=lambda x: x.name):
-            if cell.plugin != plugin:
-                continue
+        print(contents, file=f, flush=True)
 
-            config_string = template.replace("EditorID", cell.name).replace("PluginName", cell.plugin).replace("FormID", cell.id)
 
-            if "FormID" in config_string:
-                continue
-            if "PluginName" in config_string:
-                continue
+if __name__ == "__main__":
+    cells = sorted(
+        get_cells(),
+        key=lambda cell: cell.name
+    )
 
-            standard_lighting_templates_contents += config_string
+    processed_ids = []
 
-        print(standard_lighting_templates_contents.strip(), file=f)
+    for plugin in OFFICIAL_PLUGINS:
+        contents = get_contents_for(plugin, (cell for cell in cells if cell.id not in processed_ids))
+        processed_ids.extend([cell.id for cell in cells if cell.plugin == plugin])
+        write_conf(plugin, contents)
+
