@@ -212,7 +212,9 @@ if __name__ == "__main__":
         plugin_cells = [cell for cell in cells if cell.id not in processed_ids]
         if not plugin_cells:
             continue
-        contents = get_contents_for(plugin, plugin_cells)
         processed_ids.extend([cell.id for cell in cells if cell.plugin == plugin])
+        contents = get_contents_for(plugin, plugin_cells)
+        if not contents.strip():
+            continue
         write_conf(plugin, contents)
 
