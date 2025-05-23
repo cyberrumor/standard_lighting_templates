@@ -18,7 +18,8 @@ OFFICIAL_PLUGINS = [
     "HearthFires.esm",
     "Dragonborn.esm",
     "ccBGSSSE001-Fish.esm",
-    "ccBGSSSE025-AdvDSGS.esm"
+    "ccBGSSSE025-AdvDSGS.esm",
+    "ccQDRSSE001-SurvivalMode.esl",
 ]
 
 
@@ -208,7 +209,10 @@ if __name__ == "__main__":
         # We can try to guess what cells each plugin owns by processing plugins in
         # manually-defined order and excluding any cells which have an expended cell.id.
         # This might not be 100% accurate, but it fixes the crash.
-        contents = get_contents_for(plugin, (cell for cell in cells if cell.id not in processed_ids))
+        plugin_cells = [cell for cell in cells if cell.id not in processed_ids]
+        if not plugin_cells:
+            continue
+        contents = get_contents_for(plugin, plugin_cells)
         processed_ids.extend([cell.id for cell in cells if cell.plugin == plugin])
         write_conf(plugin, contents)
 
