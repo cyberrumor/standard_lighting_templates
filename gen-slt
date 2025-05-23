@@ -119,8 +119,7 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         fogfar,
         fogmax,
         fognear,
-        fogpower,
-        lightfadedistances
+        fogpower
         :clipDist=0
         :fogFar=0
         :fogNear=0
