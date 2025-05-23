@@ -4,6 +4,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
+# IceCaveOutside has 90 degrees Z and decent distance values.
+# We can't set either of these things without a template yet.
+LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
+
 # AMBIENT_FADE does nothing even if non-zero
 AMBIENT_FADE = 0
 DALC_FADE = 25
@@ -109,6 +113,10 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         f"""\
         ; EditorID
         filterByCells=PluginName|FormID
+        :lightingTemplate={LIGHTING_TEMPLATE}
+        :setInheritanceFlags=
+        directionalrotation,
+        lightfadedistances
         :removeInheritanceFlags=
         ambientcolor,
         clipdistance,
