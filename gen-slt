@@ -122,7 +122,6 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         clipdistance,
         directionalcolor,
         directionalfade,
-        directionalrotation,
         fogcolor,
         fogfar,
         fogmax,
