@@ -11,7 +11,7 @@ SPECULAR_FADE = 25
 # FOG_FADE needs to be zero to disable fog.
 FOG_FADE = 25
 
-OFFICIAL_PLUGINS = [
+SUPPORTED_PLUGINS = [
     "Skyrim.esm",
     "Update.esm",
     "Dawnguard.esm",
@@ -20,6 +20,8 @@ OFFICIAL_PLUGINS = [
     "ccBGSSSE001-Fish.esm",
     "ccBGSSSE025-AdvDSGS.esm",
     "ccQDRSSE001-SurvivalMode.esl",
+    "alternate start - live another life.esp",
+    "cutting room floor.esp",
 ]
 
 
@@ -198,7 +200,7 @@ if __name__ == "__main__":
 
     processed_ids = []
 
-    for plugin in OFFICIAL_PLUGINS:
+    for plugin in SUPPORTED_PLUGINS:
         # The "Export interior cells" script in xEdit exports cells touched by a plugin,
         # even if that plugin didn't actually _create_ the cell. If a config file uses
         # filterByCells=<plugin>|<cell>:

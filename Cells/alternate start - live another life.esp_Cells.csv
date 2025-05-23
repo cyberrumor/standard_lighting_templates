@@ -1,0 +1,45 @@
+FormID;Block;Sub-Block;EditorID;Name;Ownership;Location;LightingTemplate;ImageSpace;AcousticSpace;Music;Navmeshes;References;Persistent;Deleted;Disabled;Spawns;SpawnsList;Lights;Sounds;Furnitures;Containers
+[000AD5A1];9;4;DarkBrotherhoodSanctuary;Dark Brotherhood Sanctuary;;DarkBrotherhoodSanctuaryLocation;DefaultLightingTemplate;DefaultImageSpaceDungeon;;;0;1;1;0;0;0;;0;0;0;0
+[00016BDD];9;4;RiftenHoneyside;Honeyside;;RiftenHoneysideLocation;RiftenInteriors;RiftenInterior_ImageSpace;IntRoomStoneNarrowAcousticSpace;MUSExploreForestPine;0;5;1;0;5;0;;0;0;0;0
+[00016A06];8;7;SolitudeProudspireManor;Proudspire Manor;;SolitudeProudspireManorLocation;SolitudeInteriors;SolitudeInteriorLgIS;IntRoomStoneMediumAcousticSpace;MUSTownTest;0;5;1;0;5;0;;0;0;0;0
+[000138CE];8;7;MorthalMoorsideInn;Moorside Inn;Jonna;MorthalMoorsideInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[03002FEC];8;6;BYOHHouse1Falkreath;Lakeview Manor;PlayerFaction;BYOHHouse1LocationInterior;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;1;0;0;0;;0;0;0;0
+[03016A56];8;5;BYOHHouse3Pale;Heljarchen Hall;PlayerFaction;BYOHHouse3LocationInterior;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;1;0;0;0;;0;0;0;0
+[0005DE24];8;4;HelgenKeep01;Helgen Keep;;HelgenLocation;HelgenKeepSunlightTemplate;HelgenImageSpaceSunlight;IntDungeonFortAcousticSpace;MUSDungeonFort;0;21;17;0;5;1;MQ101Bear;0;0;2;0
+[0001677C];8;2;WindhelmPalaceoftheKings;Palace of the Kings;WindhelmPalace;WindhelmPalaceOfTheKingsLocation;WindhelmInteriorTemplate;DefaultImageSpaceDungeon;IntRoomStoneLargeAcousticSpace;MUSCastle;0;1;1;0;0;0;;0;0;0;0
+[00013A7C];8;0;DragonBridgeFourShieldsTavern;Four Shields Tavern;DragonBridgeFourShieldsInnFaction;DragonBridgeFourShieldsTavernLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[00013A5D];7;7;NightgateInn;Nightgate Inn;Hadring;NightgateInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[0007C98B];7;4;ThalmorEmbassy01;Thalmor Embassy;;ThalmorEmbassyLocation;SolitudeInteriorShops;SolitudeInteriorLgIS;IntRoomStoneMediumAcousticSpace;MUSDungeonFort;0;14;10;0;0;0;;0;0;0;0
+[00013A7B];7;0;DragonBridgePenitusOculatusOutpost;Penitus Oculatus Outpost;PenitusOculatusFaction;DragonBridgeGarrisonLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreForestPine;0;1;1;0;0;0;;0;0;0;0
+[00021594];6;9;AbandonedPrison01;Abandoned Prison;;AbandonedPrisonLocation;IlinaltasDeep_LightingTemplate;BleakFallsBarrowImagespace01;IntDungeonFortAcousticSpace;MUSDungeonFort;1;94;6;0;8;1;ARTHLALBedSkeleton;5;1;2;1
+[000213A0];6;9;SolitudeCastleDour;Castle Dour;SolitudeCastleDourFaction;SolitudeCastleDourLocation;SolitudeInteriors;SolitudeInteriorLgIS;IntRoomStoneMediumAcousticSpace;MUSCastle;0;1;1;0;0;0;;0;0;0;0
+[00016A0E];6;8;SolitudeWinkingSkeever;The Winking Skeever;SolitudeWinkingSkeeverFaction;SolitudeWinkingSkeeverLocation;SolitudeInteriors;SolitudeInterior_Liz;IntRoomStoneMediumAcousticSpace;MUSTavernB;0;1;1;0;0;0;;0;0;0;0
+[0B103390];6;7;ARTHLALFarmhouseUtilityCell;;;;;;;;0;16;12;0;0;12;BYOHPlanterNPC;0;0;0;0
+[00013A5C];6;7;IvarsteadVilemyrInn;Vilemyr Inn;IvarsteadVilemyrInnFaction;IvarsteadVilemyrInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[0003A184];6;5;FalkreathDeadMansDrink;Dead Man's Drink;FalkreathDeadMansDrinkFaction;FalkreathDeadMansDrinkLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[0001605E];6;0;WhiterunBanneredMare;The Bannered Mare;WhiterunBanneredMareFaction;WhiterunBanneredMareLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;MUSTavernB;0;1;1;0;0;0;;0;0;0;0
+[0004401B];5;5;DruadachRedoubt01;Druadach Redoubt Cave;;DruadachRedoubtLocation;BleakFallsBarrowMedium;CaveImageSpace;IntDungeonCaveEpicAcousticSpace;MUSDungeonCave;0;17;1;0;3;0;;0;0;1;2
+[000165A3];5;5;WhiterunDragonsreach;Dragonsreach;DragonsreachOccupants;WhiterunDragonsreachLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;MUSCastle;0;1;0;0;0;0;;0;0;0;0
+[00016BCF];5;3;RiftenRaggedFlagon;The Ragged Flagon;RiftenRaggedFlagonFaction;RiftenRaggedFlagonLocation;RiftenRatwayClose;RiftenRatway_Imagespace;IntSewerRatway;MUSDungeonFort;0;1;1;0;0;0;;0;0;0;0
+[00013907];5;3;KynesgroveBraidwoodInn;Braidwood Inn;KynesgroveBraidwoodInnkeeperFaction;KynesgroveBraidwoodInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[000EEC55];5;0;BlackreachZCell10;Sinderion's Field Laboratory;;BlackreachLocation;DwarvenLightingClose;DefaultImageSpaceDungeon;IntDungeonDwemerMedium;MUSDungeon;0;6;2;0;0;0;;0;0;0;1
+[00016DFE];4;9;MarkarthSilverBloodInn;Silver-Blood Inn;MarkarthSilverBloodInnFaction;MarkarthSilverBloodInnLocation;MarkarthLightingClose;MarkarthImageSpace;IntRoomStoneMediumAcousticSpace;MUSTavernB;0;1;1;0;0;0;;0;0;0;0
+[00013870];4;8;RoriksteadFrostfruitInn;Frostfruit Inn;ServicesRoriksteadMralkiFaction;RoriksteadFrostfruitInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;1;1;0;0;0;;0;0;0;0
+[000C7348];4;4;HallOfTheVigilant01;Hall of the Vigilant;VigilantOfStendarrFaction;HalloftheVigilantLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSExploreMountain;0;4;4;0;1;0;;0;0;1;2
+[03011CB3];3;8;BYOHHouse2Hjaalmarch;Windstad Manor;PlayerFaction;BYOHHouse2LocationInterior;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;1;1;0;0;0;;0;0;0;0
+[000165B5];3;7;WhiterunJorrvaskr;Jorrvaskr;CompanionsFaction;WhiterunJorrvaskrLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodLargeAcousticSpace;MUSCastle;0;1;1;0;0;0;;0;0;0;0
+[00013814];2;9;WinterholdTheFrozenHearth;The Frozen Hearth;WinterholdFrozenHearthFaction;WinterholdTheFrozenHearthLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;2;2;0;0;0;;0;0;0;0
+[000DBF12];2;8;MarasEyePond01;Mara's Eye Den;;MarasEyePondLocation;GreenCaveClose;DefaultImageSpace;IntDungeonCave;MUSDungeon;0;1;0;0;0;0;;0;0;0;0
+[000138BE];2;6;OldHroldanInn;Old Hroldan Inn;OldHroldanHangedManInnFaction;OldHroldanInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;2;2;0;0;0;;0;0;0;0
+[0003B698];2;5;RiftenRatway01;The Ratway;;RiftenRatwayLocation;RiftenRatwayClose;RiftenRatway_Imagespace;IntDungeonFortAcousticSpace;MUSDungeonFort;0;3;3;0;0;1;dunRatwayBanditMelee;0;0;0;0
+[00016776];2;2;WindhelmArgonianAssemblage;Argonian Assemblage;WindhelmArgonianFaction;WindhelmArgonianAssemblageLocation;WindhelmInteriorTemplate02;DefaultImageSpaceDungeon;IntRoomStoneLargeAcousticSpace;MUSTownTest;0;4;2;0;1;0;;0;0;0;2
+[0B031377];1;9;ARTHLALFarmhouse;Shoal's Rest Farm;ARTHLALShoalsRestFaction;ARTHLALFarmhouseLocation;DefaultLightingTemplate;;IntRoomWoodMediumAcousticSpace;;1;317;71;0;23;2;ARTHLALFarmGeraldineShoal,ARTHLALFarmSavlianShoal;6;0;21;20
+[000681DD];1;6;BoulderfallCave01;Boulderfall Cave;;BoulderfallCaveLocation;DarklightTowerTemplate;DefaultImageSpaceDungeon;IntDungeonCave;MUSDungeonCave;0;1;1;0;0;0;;0;0;0;0
+[00016BDF];1;5;RiftenBeeandBarb;The Bee and Barb;RiftenBeeandBarbFaction;RiftenBeeandBarbLocation;RiftenInteriors;RiftenInterior_ImageSpace;IntRoomWoodMediumAcousticSpace;MUSTavernB;0;1;1;0;0;0;;0;0;0;0
+[00016789];1;4;WindhelmCandlehearthHall;Candlehearth Hall;WindhelmCandlehearthOwnerFaction;WindhelmCandlehearthHallLocation;WindhelmInteriorTemplate02;DefaultImageSpaceDungeon;IntRoomWoodMediumAcousticSpace;MUSTavernB;0;1;1;0;0;0;;0;0;0;0
+[0001677F];1;3;WindhelmNewGnisisCornerclub;New Gnisis Cornerclub;WindhelmCornerclubInnkeeperFaction;WindhelmNewGnisisCornerclubLocation;WindhelmInteriorTemplate03;DefaultImageSpaceDungeon;IntRoomWoodMediumAcousticSpace;MUSTavernB;0;3;1;0;3;0;;0;0;1;1
+[00013A7F];1;1;DawnstarWindpeakInn;Windpeak Inn;DawnstarWindpeakInnFaction;DawnstarWindpeakInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;2;1;0;0;0;;0;0;0;0
+[00016DFA];0;9;MarkarthVlindrelHall;Vlindrel Hall;;MarkarthVlindrelHallLocation;MarkarthLightingClose;MarkarthImageSpace;IntRoomStoneMediumAcousticSpace;MUSTownTest;0;5;1;0;5;0;;0;0;0;0
+[000133C6];0;9;RiverwoodSleepingGiantInn;Sleeping Giant Inn;RiverwoodSleepingGiantInnFaction;RiverwoodSleepingGiantInnLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomWoodLargeAcousticSpace;MUSTavern;0;2;2;0;0;0;;0;0;0;0
+[04018682];0;7;DLC2RRAbandonedBuilding;Abandoned Building;DLC2RRBeggarFaction;DLC2RRAbandonedBuildingLocation;FarmLightingTemplate;FarmInteriorIS;IntRoomStoneMediumAcousticSpace;DLC2MUSExploreSolstheimGeneral;0;3;1;0;2;0;;0;0;1;1
+[000165A8];0;6;WhiterunBreezehome;Breezehome;;WhiterunBreezehomeLocation;WhiteRunIntLightingTemplate;WhiteRunIntIS;IntRoomWoodMediumAcousticSpace;MUSTownTest;0;5;1;0;5;0;;0;0;0;0
