@@ -11,9 +11,9 @@ LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
 # AMBIENT_FADE does nothing even if non-zero
 AMBIENT_FADE = 0
 DALC_FADE = 25
-SPECULAR_FADE = 25
+SPECULAR_FADE = 0
 # FOG_FADE needs to be zero to disable fog.
-FOG_FADE = 25
+FOG_FADE = 0
 
 SUPPORTED_PLUGINS = [
     "Skyrim.esm",
