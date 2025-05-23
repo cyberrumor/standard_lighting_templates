@@ -22,6 +22,7 @@ SUPPORTED_PLUGINS = [
     "ccQDRSSE001-SurvivalMode.esl",
     "alternate start - live another life.esp",
     "cutting room floor.esp",
+    "LegacyoftheDragonborn.esm",
 ]
 
 
