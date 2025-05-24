@@ -14,23 +14,7 @@ DALC_FADE = 25
 SPECULAR_FADE = 0
 FOG_FADE = 0
 
-SUPPORTED_PLUGINS = [
-    "Skyrim.esm",
-    "Update.esm",
-    "Dawnguard.esm",
-    "HearthFires.esm",
-    "Dragonborn.esm",
-    "ccBGSSSE001-Fish.esm",
-    "ccBGSSSE025-AdvDSGS.esm",
-    "ccQDRSSE001-SurvivalMode.esl",
-    "alternate start - live another life.esp",
-    "cutting room floor.esp",
-    "LegacyoftheDragonborn.esm",
-    "BSAssets.esm",
-    "BSHeartland.esm",
-    "BS_DLC_patch.esp",
-]
-
+SUPPORTED_PLUGINS = [file.name.rstrip("_Cells.csv") for file in Path("Cells").iterdir()]
 
 @dataclass(kw_only=True)
 class Cell:
