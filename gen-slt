@@ -12,7 +12,6 @@ LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
 AMBIENT_FADE = 0
 DALC_FADE = 25
 SPECULAR_FADE = 0
-# FOG_FADE needs to be zero to disable fog.
 FOG_FADE = 0
 
 SUPPORTED_PLUGINS = [
@@ -112,7 +111,7 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
     template = textwrap.dedent(
         f"""\
         ; EditorID
-        filterByCells=PluginName|FormID
+        filterByCells=EditorID
         :lightingTemplate={LIGHTING_TEMPLATE}
         :setInheritanceFlags=
         directionalrotation,
@@ -169,13 +168,7 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         if cell.plugin != plugin:
             continue
 
-        config_string = template.replace(
-            "EditorID", cell.name
-        ).replace(
-            "PluginName", cell.plugin
-        ).replace(
-            "FormID", cell.id
-        )
+        config_string = template.replace("EditorID", cell.name)
 
         formatted_config_string = config_string.replace(
             "\n:", ":"
@@ -208,23 +201,17 @@ if __name__ == "__main__":
         key=lambda cell: cell.name
     )
 
-    processed_ids = []
-
     for plugin in SUPPORTED_PLUGINS:
         # The "Export interior cells" script in xEdit exports cells touched by a plugin,
         # even if that plugin didn't actually _create_ the cell. If a config file uses
-        # filterByCells=<plugin>|<cell>:
+        # filterByCells=<plugin>|<cell>
         # where that cell was created by a different plugin than the one specified, then
         # SkyPatcher will ctd after the main menu background shows but before the menu
         # is possible to interact with.
-
-        # We can try to guess what cells each plugin owns by processing plugins in
-        # manually-defined order and excluding any cells which have an expended cell.id.
-        # This might not be 100% accurate, but it fixes the crash.
-        plugin_cells = [cell for cell in cells if cell.id not in processed_ids]
-        if not plugin_cells:
-            continue
-        processed_ids.extend([cell.id for cell in cells if cell.plugin == plugin])
+        # Therefore, use
+        # filterByCells=<EditorID>
+        # instead.
+        plugin_cells = [cell for cell in cells if cell.plugin == plugin]
         contents = get_contents_for(plugin, plugin_cells)
         if not contents.strip():
             continue
