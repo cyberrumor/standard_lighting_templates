@@ -190,6 +190,7 @@ def write_conf(plugin: str, contents: str) -> None:
     """
     home = Path.home()
     parent_path = home / ".local/share/ammo/Skyrim Special Edition/mods/standard_lighting_templates/Data/SKSE/Plugins/SkyPatcher/cell/standard_lighting_templates/"
+    parent_path.mkdir(parents=True, exist_ok=True)
 
     with open(parent_path / f"{plugin}.ini", "w") as f:
         print(contents, file=f, flush=True)
