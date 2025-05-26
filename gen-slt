@@ -8,11 +8,9 @@ from typing import Iterable
 # We can't set either of these things without a template yet.
 LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
 
-# AMBIENT_FADE does nothing even if non-zero
-AMBIENT_FADE = 0
-DALC_FADE = 25
-SPECULAR_FADE = 0
-FOG_FADE = 0
+DALC_FADE = 0
+SPECULAR_FADE = 50
+FOG_FADE = 50
 
 SUPPORTED_PLUGINS = [file.name.rstrip("_Cells.csv") for file in Path("Cells").iterdir()]
 
@@ -101,7 +99,6 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         directionalrotation,
         lightfadedistances
         :removeInheritanceFlags=
-        ambientcolor,
         clipdistance,
         directionalcolor,
         directionalfade,
@@ -114,9 +111,6 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         :fogFar=0
         :fogNear=0
         :fogPower=1
-        :ambientBlue={AMBIENT_FADE}
-        :ambientGreen={AMBIENT_FADE}
-        :ambientRed={AMBIENT_FADE}
         :directionalAmbientSpecularBlue={SPECULAR_FADE}
         :directionalAmbientSpecularGreen={SPECULAR_FADE}
         :directionalAmbientSpecularRed={SPECULAR_FADE}
