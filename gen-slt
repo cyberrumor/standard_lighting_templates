@@ -4,13 +4,43 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-# IceCaveOutside has 90 degrees Z and decent distance values.
-# We can't set either of these things without a template yet.
+# Docs:
+# https://ck.uesp.net/wiki/Lighting_Template
+# Note that Specular, Fresnel Power, and Ambient don't impact the scene at all.
+
+# Cells Patcher 5.0.2 doens't support setting the following, so we need to
+# inherit them from a template:
+# - fogmax
+# - directionalrotation
+# - lightfadedistances
 LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
 
+# Color of directional ambient lighting
 DALC_FADE = 0
-SPECULAR_FADE = 50
-FOG_FADE = 50
+
+# Color of fog (for r, g, and b)
+FOG_FADE = 0
+
+# How many units away from player camera before fog starts to show up.
+FOG_NEAR = 0
+
+# The distance where the fog maxes out. If your max fog power is less
+# than one, the distance where you reach your maximum fog value will be
+# shorter than this.
+FOG_FAR = 1_000_000
+
+# The power of the fog (between 0 and 1). The lower this value is,
+# the quicker the fog will show up.
+FOG_POW = 1
+
+# The maximum amount the fog color can impact the scene. 1 means it
+# can go to 100% of the fog color. This is usually set around .7 in
+# vanilla to show fog while preventing scenes from going to a flat color.
+# FOG_MAX = 0
+
+# How many units until geometry is clipped out of the scene.
+CLIP_DIST = 1_000_000
+
 
 SUPPORTED_PLUGINS = [file.name.rstrip("_Cells.csv") for file in Path("Cells").iterdir()]
 
@@ -97,6 +127,7 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         :lightingTemplate={LIGHTING_TEMPLATE}
         :setInheritanceFlags=
         directionalrotation,
+        fogmax,
         lightfadedistances
         :removeInheritanceFlags=
         clipdistance,
@@ -104,16 +135,12 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         directionalfade,
         fogcolor,
         fogfar,
-        fogmax,
         fognear,
         fogpower
-        :clipDist=0
-        :fogFar=0
-        :fogNear=0
-        :fogPower=1
-        :directionalAmbientSpecularBlue={SPECULAR_FADE}
-        :directionalAmbientSpecularGreen={SPECULAR_FADE}
-        :directionalAmbientSpecularRed={SPECULAR_FADE}
+        :clipDist={CLIP_DIST}
+        :fogFar={FOG_FAR}
+        :fogNear={FOG_NEAR}
+        :fogPower={FOG_POW}
         :directionalAmbientXMaxBlue={DALC_FADE}
         :directionalAmbientXMaxGreen={DALC_FADE}
         :directionalAmbientXMaxRed={DALC_FADE}
