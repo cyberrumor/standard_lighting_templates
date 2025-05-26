@@ -76,21 +76,14 @@ NO_INHERIT_FLAGS = {
     # ambientcolor itself does nothing but let you automatically set DALC via a button in the CK.
     # We have to inherit it to be able to override DALC though.
     "ambientcolor": (
-        f"ambientRed={AMBIENT}:ambientGreen={AMBIENT}:ambientBlue={AMBIENT}"
-        +
-        f"directionalAmbientXMinRed={DALC_MIN}:directionalAmbientXMinGreen={DALC_MIN}:directionalAmbientXMinBlue={DALC_MIN}"
-        +
-        f"directionalAmbientXMaxRed={DALC_MAX}:directionalAmbientXMaxGreen={DALC_MAX}:directionalAmbientXMaxBlue={DALC_MAX}"
-        +
-        f"directionalAmbientYMinRed={DALC_MIN}:directionalAmbientYMinGreen={DALC_MIN}:directionalAmbientYMinBlue={DALC_MIN}"
-        +
-        f"directionalAmbientYMaxRed={DALC_MAX}:directionalAmbientYMaxGreen={DALC_MAX}:directionalAmbientYMaxBlue={DALC_MAX}"
-        +
-        f"directionalAmbientZMinRed={DALC_MIN}:directionalAmbientZMinGreen={DALC_MIN}:directionalAmbientZMinBlue={DALC_MIN}"
-        +
-        f"directionalAmbientZMaxRed={DALC_MAX}:directionalAmbientZMaxGreen={DALC_MAX}:directionalAmbientZMaxBlue={DALC_MAX}"
-        +
-        f"directionalAmbientSpecularRed={SPECULAR}:directionalAmbientSpecularGreen={SPECULAR}:directionalAmbientSpecularBlue={SPECULAR}"
+        f"ambientRed={AMBIENT}:ambientGreen={AMBIENT}:ambientBlue={AMBIENT}:"
+        + f"directionalAmbientXMinRed={DALC_MIN}:directionalAmbientXMinGreen={DALC_MIN}:directionalAmbientXMinBlue={DALC_MIN}:"
+        + f"directionalAmbientXMaxRed={DALC_MAX}:directionalAmbientXMaxGreen={DALC_MAX}:directionalAmbientXMaxBlue={DALC_MAX}:"
+        + f"directionalAmbientYMinRed={DALC_MIN}:directionalAmbientYMinGreen={DALC_MIN}:directionalAmbientYMinBlue={DALC_MIN}:"
+        + f"directionalAmbientYMaxRed={DALC_MAX}:directionalAmbientYMaxGreen={DALC_MAX}:directionalAmbientYMaxBlue={DALC_MAX}:"
+        + f"directionalAmbientZMinRed={DALC_MIN}:directionalAmbientZMinGreen={DALC_MIN}:directionalAmbientZMinBlue={DALC_MIN}:"
+        + f"directionalAmbientZMaxRed={DALC_MAX}:directionalAmbientZMaxGreen={DALC_MAX}:directionalAmbientZMaxBlue={DALC_MAX}:"
+        + f"directionalAmbientSpecularRed={SPECULAR}:directionalAmbientSpecularGreen={SPECULAR}:directionalAmbientSpecularBlue={SPECULAR}"
     ),
     "clipdistance": f"clipDist={CLIP_DIST}",
     "directionalcolor": f"directionalRed={DIRECTIONAL_COLOR}:directionalGreen={DIRECTIONAL_COLOR}:directionalBlue={DIRECTIONAL_COLOR}",
@@ -103,24 +96,26 @@ NO_INHERIT_FLAGS = {
 
 # Make sure we're specifying every available flag.
 for flag in AVAILABLE_FLAGS:
-    assert (
-        flag in INHERIT_FLAGS or flag in NO_INHERIT_FLAGS
-    ), f"{flag} was not specified to be inherited or overridden"
+    assert flag in INHERIT_FLAGS or flag in NO_INHERIT_FLAGS, (
+        f"{flag} was not specified to be inherited or overridden"
+    )
 
 # Make sure we're not doubling up on flags.
 for flag in INHERIT_FLAGS:
-    assert (
-        flag not in NO_INHERIT_FLAGS
-    ), f"{flag} was in INHERIT_FLAGS and NO_INHERIT_FLAGS. You can only use one or the other."
+    assert flag not in NO_INHERIT_FLAGS, (
+        f"{flag} was in INHERIT_FLAGS and NO_INHERIT_FLAGS. You can only use one or the other."
+    )
 
 
 SUPPORTED_PLUGINS = [file.name.rstrip("_Cells.csv") for file in Path("Cells").iterdir()]
 
+
 @dataclass(kw_only=True)
 class Cell:
-    plugin: str # Skyrim.esm
-    name: str   # whiterundragonsreach
-    id: str     # 000165A3
+    plugin: str  # Skyrim.esm
+    name: str  # whiterundragonsreach
+    id: str  # 000165A3
+
 
 def get_cells() -> Iterable[Cell]:
     """
@@ -170,8 +165,7 @@ def get_cells() -> Iterable[Cell]:
 
             if any(
                 i in cell.name.lower()
-                for i in
-                [
+                for i in [
                     "marker",
                     "test",
                     "holding",
@@ -184,6 +178,7 @@ def get_cells() -> Iterable[Cell]:
                 continue
 
             yield cell
+
 
 def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
     """
@@ -214,12 +209,8 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
 
         config_string = template.replace("EditorID", cell.name)
 
-        formatted_config_string = config_string.replace(
-            "\n:", ":"
-        ).replace(
-            ",\n", ", "
-        ).replace(
-            "=\n", "="
+        formatted_config_string = (
+            config_string.replace("\n:", ":").replace(",\n", ", ").replace("=\n", "=")
         )
 
         result += formatted_config_string
@@ -233,7 +224,10 @@ def write_conf(plugin: str, contents: str) -> None:
     find and write that plugin's conf file in-place.
     """
     home = Path.home()
-    parent_path = home / ".local/share/ammo/Skyrim Special Edition/mods/standard_lighting_templates/Data/SKSE/Plugins/SkyPatcher/cell/standard_lighting_templates/"
+    parent_path = (
+        home
+        / ".local/share/ammo/Skyrim Special Edition/mods/standard_lighting_templates/Data/SKSE/Plugins/SkyPatcher/cell/standard_lighting_templates/"
+    )
     parent_path.mkdir(parents=True, exist_ok=True)
 
     with open(parent_path / f"{plugin}.ini", "w") as f:
@@ -241,10 +235,7 @@ def write_conf(plugin: str, contents: str) -> None:
 
 
 if __name__ == "__main__":
-    cells = sorted(
-        get_cells(),
-        key=lambda cell: cell.name
-    )
+    cells = sorted(get_cells(), key=lambda cell: cell.name)
 
     for plugin in SUPPORTED_PLUGINS:
         # The "Export interior cells" script in xEdit exports cells touched by a plugin,
@@ -261,4 +252,3 @@ if __name__ == "__main__":
         if not contents.strip():
             continue
         write_conf(plugin, contents)
-
