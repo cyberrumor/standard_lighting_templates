@@ -15,15 +15,19 @@ from typing import Iterable
 CLIP_DIST = 0
 
 # Color of directional ambient lighting
+# 13 is good for linear lighting.
+# 25 is good for no linear lighting.
 DALC_MAX = 25
-DALC_MIN = 10
+DALC_MIN = DALC_MAX
 
+# This is a light that impacts the entire cell. It is used to simulate bounced light.
+# If you set them all to 255 and everything else to black, everything looks like dogshit.
+# At least they're getting used, I guess. This comes from the top down. I noticed a bug
+# where you can turn these off by setting them both to zero, but if you set both small
+# non-zero values like 2, the most dim area will be more like 25 than 2. Maybe an issue
+# with linear lighting?
 DIRECTIONAL_COLOR = 0
-
-# This is a light that impacts the entire cell.
-# It is generally used to simulate bounced light.
-# This value is used for both color and brightness.
-DIRECTIONAL_FADE = 25
+DIRECTIONAL_FADE = 0
 
 # This is completely unused by the game, but is used in the creation kit.
 AMBIENT = 0
