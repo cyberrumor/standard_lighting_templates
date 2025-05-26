@@ -1,12 +1,8 @@
-# standard_lighting_templates
+# Standard Lighting Templates (SLT)
 
 A Skyrim SE mod.
 
-Lighting templates set the light color and fog density in the absence of light
-sources or FX. Standard Lighting Templates are clear, consistent, and realistic.
-They work with any lighting load order (including vanilla) and look fantastic.
-
-# Requirements
-
-- [SkyPatcher](https://www.nexusmods.com/skyrimspecialedition/mods/106659)
-
+Lighting templates set the color of ambient light and the density of fog in
+interiors. Clear, dark templates are the best way to emphasize the light of
+fires, windows, and magic. This mod provides such templates, and applies them
+everywhere.
