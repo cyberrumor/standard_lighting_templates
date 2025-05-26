@@ -8,21 +8,34 @@ from typing import Iterable
 # https://ck.uesp.net/wiki/Lighting_Template
 # Note that Specular, Fresnel Power, and Ambient don't impact the scene at all.
 
-# Cells Patcher 5.0.2 doens't support setting the following, so we need to
-# inherit them from a template:
-# - fogmax
-# - directionalrotation
-# - lightfadedistances
-LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
+
+# How many units until geometry is clipped out of the scene.
+# Both 0 and 1 disable this kind of clipping. Disable that shit
+# so the walls don't disappear and whatnot.
+CLIP_DIST = 0
 
 # Color of directional ambient lighting
-DALC_FADE = 0
+DALC_MAX = 25
+DALC_MIN = 10
 
-# Color of fog (for r, g, and b)
+DIRECTIONAL_COLOR = 0
+
+# This is a light that impacts the entire cell.
+# It is generally used to simulate bounced light.
+# This value is used for both color and brightness.
+DIRECTIONAL_FADE = 25
+
+# This is completely unused by the game, but is used in the creation kit.
+AMBIENT = 0
+# This is completely unused by the game, never fully implemented by Bethesda.
+SPECULAR = 0
+
+# Color of fog.
 FOG_FADE = 0
 
 # How many units away from player camera before fog starts to show up.
-FOG_NEAR = 0
+# Best to set this in case disabling fog doesn't work for some reason.
+FOG_NEAR = 100_000
 
 # The distance where the fog maxes out. If your max fog power is less
 # than one, the distance where you reach your maximum fog value will be
@@ -30,16 +43,75 @@ FOG_NEAR = 0
 FOG_FAR = 1_000_000
 
 # The power of the fog (between 0 and 1). The lower this value is,
-# the quicker the fog will show up.
+# the quicker the fog will show up. This should be set to 1 so the
+# values from FOG_NEAR and FOG_FAR actually get used verbatim.
 FOG_POW = 1
 
-# The maximum amount the fog color can impact the scene. 1 means it
-# can go to 100% of the fog color. This is usually set around .7 in
-# vanilla to show fog while preventing scenes from going to a flat color.
-# FOG_MAX = 0
+AVAILABLE_FLAGS = [
+    "ambientcolor",
+    "clipdistance",
+    "directionalcolor",
+    "directionalfade",
+    "directionalrotation",
+    "fogcolor",
+    "fogfar",
+    "fogmax",
+    "fognear",
+    "fogpower",
+    "lightfadedistances",
+]
 
-# How many units until geometry is clipped out of the scene.
-CLIP_DIST = 1_000_000
+LIGHTING_TEMPLATE = "StandardLightingTemplates.esp|000801"
+INHERIT_FLAGS = [
+    # fogmax is the maximum amount the fog can impact the scene.
+    # It's represented as a percent from 0 to 1. 0 disables fog.
+    # We can't set this with SkyPatcher so we must inherit.
+    "fogmax",
+    "directionalrotation",
+    "lightfadedistances",
+]
+
+# Stuff we want to set ourselves.
+NO_INHERIT_FLAGS = {
+    # ambientcolor itself does nothing but let you automatically set DALC via a button in the CK.
+    # We have to inherit it to be able to override DALC though.
+    "ambientcolor": (
+        f"ambientRed={AMBIENT}:ambientGreen={AMBIENT}:ambientBlue={AMBIENT}"
+        +
+        f"directionalAmbientXMinRed={DALC_MIN}:directionalAmbientXMinGreen={DALC_MIN}:directionalAmbientXMinBlue={DALC_MIN}"
+        +
+        f"directionalAmbientXMaxRed={DALC_MAX}:directionalAmbientXMaxGreen={DALC_MAX}:directionalAmbientXMaxBlue={DALC_MAX}"
+        +
+        f"directionalAmbientYMinRed={DALC_MIN}:directionalAmbientYMinGreen={DALC_MIN}:directionalAmbientYMinBlue={DALC_MIN}"
+        +
+        f"directionalAmbientYMaxRed={DALC_MAX}:directionalAmbientYMaxGreen={DALC_MAX}:directionalAmbientYMaxBlue={DALC_MAX}"
+        +
+        f"directionalAmbientZMinRed={DALC_MIN}:directionalAmbientZMinGreen={DALC_MIN}:directionalAmbientZMinBlue={DALC_MIN}"
+        +
+        f"directionalAmbientZMaxRed={DALC_MAX}:directionalAmbientZMaxGreen={DALC_MAX}:directionalAmbientZMaxBlue={DALC_MAX}"
+        +
+        f"directionalAmbientSpecularRed={SPECULAR}:directionalAmbientSpecularGreen={SPECULAR}:directionalAmbientSpecularBlue={SPECULAR}"
+    ),
+    "clipdistance": f"clipDist={CLIP_DIST}",
+    "directionalcolor": f"directionalRed={DIRECTIONAL_COLOR}:directionalGreen={DIRECTIONAL_COLOR}:directionalBlue={DIRECTIONAL_COLOR}",
+    "directionalfade": f"directionalFade={DIRECTIONAL_FADE}",
+    "fogcolor": f"fogColorNearRed={FOG_FADE}:fogColorNearGreen={FOG_FADE}:fogColorNearBlue={FOG_FADE}",
+    "fogfar": f"fogFar={FOG_FAR}",
+    "fognear": f"fogNear={FOG_NEAR}",
+    "fogpower": f"fogPower={FOG_POW}",
+}
+
+# Make sure we're specifying every available flag.
+for flag in AVAILABLE_FLAGS:
+    assert (
+        flag in INHERIT_FLAGS or flag in NO_INHERIT_FLAGS
+    ), f"{flag} was not specified to be inherited or overridden"
+
+# Make sure we're not doubling up on flags.
+for flag in INHERIT_FLAGS:
+    assert (
+        flag not in NO_INHERIT_FLAGS
+    ), f"{flag} was in INHERIT_FLAGS and NO_INHERIT_FLAGS. You can only use one or the other."
 
 
 SUPPORTED_PLUGINS = [file.name.rstrip("_Cells.csv") for file in Path("Cells").iterdir()]
@@ -124,50 +196,17 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         f"""\
         ; EditorID
         filterByCells=EditorID
-        :lightingTemplate={LIGHTING_TEMPLATE}
-        :setInheritanceFlags=
-        directionalrotation,
-        fogmax,
-        lightfadedistances
-        :removeInheritanceFlags=
-        clipdistance,
-        directionalcolor,
-        directionalfade,
-        fogcolor,
-        fogfar,
-        fognear,
-        fogpower
-        :clipDist={CLIP_DIST}
-        :fogFar={FOG_FAR}
-        :fogNear={FOG_NEAR}
-        :fogPower={FOG_POW}
-        :directionalAmbientXMaxBlue={DALC_FADE}
-        :directionalAmbientXMaxGreen={DALC_FADE}
-        :directionalAmbientXMaxRed={DALC_FADE}
-        :directionalAmbientXMinBlue={DALC_FADE}
-        :directionalAmbientXMinGreen={DALC_FADE}
-        :directionalAmbientXMinRed={DALC_FADE}
-        :directionalAmbientYMaxBlue={DALC_FADE}
-        :directionalAmbientYMaxGreen={DALC_FADE}
-        :directionalAmbientYMaxRed={DALC_FADE}
-        :directionalAmbientYMinBlue={DALC_FADE}
-        :directionalAmbientYMinGreen={DALC_FADE}
-        :directionalAmbientYMinRed={DALC_FADE}
-        :directionalAmbientZMaxBlue={DALC_FADE}
-        :directionalAmbientZMaxGreen={DALC_FADE}
-        :directionalAmbientZMaxRed={DALC_FADE}
-        :directionalAmbientZMinBlue={DALC_FADE}
-        :directionalAmbientZMinGreen={DALC_FADE}
-        :directionalAmbientZMinRed={DALC_FADE}
-        :directionalBlue={DALC_FADE}
-        :directionalGreen={DALC_FADE}
-        :directionalRed={DALC_FADE}
-        :fogColorNearBlue={FOG_FADE}
-        :fogColorNearGreen={FOG_FADE}
-        :fogColorNearRed={FOG_FADE}
-
+        :lightingTemplate=StandardLightingTemplates.esp|00801
+        :setInheritanceFlags={", ".join(INHERIT_FLAGS)}
+        :removeInheritanceFlags={", ".join(NO_INHERIT_FLAGS)}
         """
     )
+
+    for flag, value in NO_INHERIT_FLAGS.items():
+        template += f":{value}\n"
+
+    template += "\n"
+
     result = ""
     for cell in cells:
         if cell.plugin != plugin:
@@ -178,7 +217,7 @@ def get_contents_for(plugin: str, cells: Iterable[Cell]) -> str:
         formatted_config_string = config_string.replace(
             "\n:", ":"
         ).replace(
-            ",\n", ","
+            ",\n", ", "
         ).replace(
             "=\n", "="
         )
