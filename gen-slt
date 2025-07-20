@@ -909,7 +909,7 @@ INTERIOR_MAP = {
     "IlinaltasDeep02": InteriorType.DUNGEON_FORT,
     "Irkngthand01": InteriorType.DUNGEON_DWEMER,
     "Irkngthand02": InteriorType.DUNGEON_DWEMER,
-    "Irkngthand03": InteriorType.DUNGON_DWEMER,
+    "Irkngthand03": InteriorType.DUNGEON_DWEMER,
     "Irkngthand04": InteriorType.DUNGEON_DWEMER,
     "IronbindBarrow01": InteriorType.DUNGEON_UNDEAD,
     "IvarsteadFellstarFarm": InteriorType.CITY,
